@@ -47,7 +47,6 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 		border: white 2px solid;
 		background-color: white;
 		color: #fc4a1a;
-
 		transform: translateY(80px);
 		opacity: 0;
 		transition: $transition;
