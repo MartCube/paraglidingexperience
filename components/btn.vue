@@ -21,7 +21,7 @@ $transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
 .btn {
 	align-self: center;
 	width: 180px;
-	padding: 30px 10px;
+	padding: 10px;
 	margin: 20px 0;
 	border-radius: 50px;
 	border: #fc4a1a 2px solid;

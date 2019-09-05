@@ -54,7 +54,6 @@
 export default {
 	methods: {
 		ScrollToTop() {
-			console.log('scrol')
 			window.scrollTo({ top: 0, behavior: 'smooth' })
 		},
 	},
