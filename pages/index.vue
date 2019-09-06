@@ -101,7 +101,7 @@ export default {
 .intro {
 	width: 100%;
 	min-height: 100vh;
-	background-image: url('/index/landing.jpg');
+	background-image: url('/landing.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
