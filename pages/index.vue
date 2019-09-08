@@ -1,6 +1,11 @@
 <template>
 	<div class="container">
-		<div class="intro"></div>
+		<div class="intro">
+			<div class="scroll">
+				<h2>scroll</h2>
+				<div class="bar"></div>
+			</div>
+		</div>
 		<div v-observe-visibility="{ callback: tandemVisibility, once: true, intersection: { threshold: 0.3 } }" class="tandem">
 			<div class="images">
 				<div class="image">
@@ -100,8 +105,8 @@ export default {
 }
 .intro {
 	width: 100%;
-	min-height: 100vh;
-	background-image: url('/index/landing.jpg');
+	height: 100vh;
+	background-image: url('/landing.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -111,6 +116,35 @@ export default {
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+
+	.scroll {
+		position: absolute;
+		bottom: 5%;
+
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		align-content: center;
+
+		h2 {
+			color: white;
+			text-transform: uppercase;
+			font-size: 1em;
+			letter-spacing: 0.1em;
+			writing-mode: tb-rl;
+			transform: rotate(-180deg);
+			user-select: none;
+			//padding: 25px 0 0px 15px;
+			//border-left: 2px solid #fc4a1a;
+		}
+		.bar {
+			width: 2px;
+			height: 100px;
+			border-radius: 10px;
+			background: #fc4a1a;
+			margin: 0 10px;
+		}
+	}
 }
 
 .tandem {

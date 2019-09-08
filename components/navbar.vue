@@ -1,5 +1,9 @@
 <template>
 	<nav class="navbar ">
+		<div class="logo">
+			<img src="/logo.png" alt="parapax" />
+		</div>
+
 		<div class="links" :class="{ active: isActive }" @click="CloseMenu">
 			<n-link exact to="/">Home</n-link>
 			<n-link to="/about">About us</n-link>
@@ -38,10 +42,21 @@ export default {
 <style lang="scss" scooped>
 .navbar {
 	position: fixed;
+	top: 0;
 	z-index: 999;
+	height: 60px;
+	width: 100%;
+	//background: #171717;
+	background: linear-gradient(292deg, rgba(150, 150, 150, 0.03) 0%, rgba(150, 150, 150, 0.03) 20%, rgba(151, 151, 151, 0.03) 20%, rgba(151, 151, 151, 0.03) 40%, rgba(215, 215, 215, 0.03) 40%, rgba(215, 215, 215, 0.03) 60%, rgba(254, 254, 254, 0.03) 60%, rgba(254, 254, 254, 0.03) 80%, rgba(112, 112, 112, 0.03) 80%, rgba(112, 112, 112, 0.03) 100%), linear-gradient(62deg, rgba(34, 34, 34, 0.03) 0%, rgba(34, 34, 34, 0.03) 20%, rgba(171, 171, 171, 0.03) 20%, rgba(171, 171, 171, 0.03) 40%, rgba(206, 206, 206, 0.03) 40%, rgba(206, 206, 206, 0.03) 60%, rgba(210, 210, 210, 0.03) 60%, rgba(210, 210, 210, 0.03) 80%, rgba(69, 69, 69, 0.03) 80%, rgba(69, 69, 69, 0.03) 100%),
+		linear-gradient(314deg, rgba(235, 235, 235, 0.03) 0%, rgba(235, 235, 235, 0.03) 20%, rgba(254, 254, 254, 0.03) 20%, rgba(254, 254, 254, 0.03) 40%, rgba(178, 178, 178, 0.03) 40%, rgba(178, 178, 178, 0.03) 60%, rgba(211, 211, 211, 0.03) 60%, rgba(211, 211, 211, 0.03) 80%, rgba(73, 73, 73, 0.03) 80%, rgba(73, 73, 73, 0.03) 100%), linear-gradient(32deg, rgba(182, 182, 182, 0.01) 0%, rgba(182, 182, 182, 0.01) 12.5%, rgba(208, 208, 208, 0.01) 12.5%, rgba(208, 208, 208, 0.01) 25%, rgba(178, 178, 178, 0.01) 25%, rgba(178, 178, 178, 0.01) 37.5%, rgba(143, 143, 143, 0.01) 37.5%, rgba(143, 143, 143, 0.01) 50%, rgba(211, 211, 211, 0.01) 50%, rgba(211, 211, 211, 0.01) 62.5%, rgba(92, 92, 92, 0.01) 62.5%, rgba(92, 92, 92, 0.01) 75%, rgba(56, 56, 56, 0.01) 75%, rgba(56, 56, 56, 0.01) 87.5%, rgba(253, 253, 253, 0.01) 87.5%, rgba(253, 253, 253, 0.01) 100%),
+		linear-gradient(247deg, rgba(103, 103, 103, 0.02) 0%, rgba(103, 103, 103, 0.02) 12.5%, rgba(240, 240, 240, 0.02) 12.5%, rgba(240, 240, 240, 0.02) 25%, rgba(18, 18, 18, 0.02) 25%, rgba(18, 18, 18, 0.02) 37.5%, rgba(38, 38, 38, 0.02) 37.5%, rgba(38, 38, 38, 0.02) 50%, rgba(246, 246, 246, 0.02) 50%, rgba(246, 246, 246, 0.02) 62.5%, rgba(9, 9, 9, 0.02) 62.5%, rgba(9, 9, 9, 0.02) 75%, rgba(167, 167, 167, 0.02) 75%, rgba(167, 167, 167, 0.02) 87.5%, rgba(86, 86, 86, 0.02) 87.5%, rgba(86, 86, 86, 0.02) 100%), linear-gradient(90deg, hsl(194, 0%, 10%), hsl(194, 0%, 10%));
 
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: center;
 	.links {
-		display: none;
+		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 		align-content: space-around;
@@ -49,18 +64,18 @@ export default {
 
 		a {
 			text-decoration: none;
-			font-size: 2em;
+			font-size: 1.2em;
 			text-transform: uppercase;
-			color: #343a40;
+			color: white;
 			outline: none;
 
 			&::after {
 				content: '';
 				display: block;
 				width: 100%;
-				height: 5px;
+				height: 3px;
 				border-radius: 10px;
-				background: #343a40;
+				background: #fc4a1a;
 
 				opacity: 0;
 				transition: all 0.3s;
@@ -103,12 +118,22 @@ export default {
 		}
 	}
 
-	.button {
+	.logo {
 		display: flex;
+		flex-basis: 50%;
+		padding-left: 20px;
+		color: white;
+		img {
+			height: 50px;
+		}
+	}
+
+	.button {
+		display: none;
 		position: fixed;
 		top: 0;
 		right: 0;
-		margin: 30px;
+		margin: 15px;
 		height: 27px;
 		width: 35px;
 		cursor: pointer;
@@ -130,7 +155,7 @@ export default {
 		}
 
 		span {
-			background: #343a40;
+			background: white;
 			border-radius: 10px;
 			height: 5px;
 			width: 100%;
@@ -159,6 +184,23 @@ export default {
 	100% {
 		opacity: 1;
 		transform: translateX(0px);
+	}
+}
+
+@media (max-width: 750px) {
+	.navbar {
+		justify-content: flex-start;
+		align-items: center;
+		align-content: center;
+		.logo {
+			flex: none;
+		}
+		.links {
+			display: none;
+		}
+		.button {
+			display: flex;
+		}
 	}
 }
 </style>
