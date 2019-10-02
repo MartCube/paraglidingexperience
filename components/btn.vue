@@ -26,7 +26,7 @@ $transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
 	border-radius: 50px;
 	border: #fc4a1a 2px solid;
 	background-color: rgba(255, 255, 255, 0);
-	box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.2);
 
 	text-decoration: none;
 	text-align: center;
