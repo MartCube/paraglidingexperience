@@ -6,8 +6,8 @@
 
 		<div class="links" :class="{ active: isActive }" @click="CloseMenu">
 			<n-link exact to="/">Home</n-link>
-			<n-link to="/about">About us</n-link>
 			<n-link to="/tours">Tours</n-link>
+			<n-link to="/about">About us</n-link>
 			<n-link to="/gallery">Gallery</n-link>
 			<n-link to="/faq">FAQ</n-link>
 			<n-link to="/contact">Contact</n-link>

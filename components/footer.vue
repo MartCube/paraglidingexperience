@@ -30,7 +30,7 @@
 					<i class="icon icon-twitter" />
 				</a>
 				<a class="youtube" href="#" title="YouTube">
-					<i class="icon icon-youtube-play" />
+					<i class="icon icon-youtube" />
 				</a>
 			</div>
 		</div>
@@ -187,7 +187,7 @@ $colors: (
 	}
 	.website_map {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 
 		justify-content: center;
 		align-items: center;
@@ -197,6 +197,7 @@ $colors: (
 		.links {
 			display: flex;
 			flex-direction: column;
+			margin: 0 20px;
 			h3 {
 				margin: 10px 0;
 			}
@@ -210,6 +211,11 @@ $colors: (
 				&:hover {
 					opacity: 1;
 				}
+			}
+			p {
+				color: white;
+				margin: 5px;
+				opacity: 0.7;
 			}
 		}
 	}

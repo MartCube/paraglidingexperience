@@ -75,12 +75,6 @@
 			</div>
 		</div>
 
-		<h2>Tandem flights</h2>
-		<h2>about south africa</h2>
-		<p>why south africa</p>
-		<p>flying conditions</p>
-		<p>altitude, launch,landing, cloudbase</p>
-
 		<div class="btn" @click="openModal">
 			open modal
 		</div>

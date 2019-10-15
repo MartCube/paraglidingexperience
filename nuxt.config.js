@@ -15,7 +15,7 @@ module.exports = {
 	css: ['~/assets/style.scss'],
 
 	// Plugins to load before mounting the App
-	plugins: [{ src: `~plugins/ObserveVisibility`, ssr: true }],
+	plugins: [{ src: `~plugins/ObserveVisibility`, ssr: true }, { src: '~/plugins/v-calendar.js', ssr: false }, { src: '~/plugins/v-select.js', ssr: false }],
 
 	// Nuxt.js modules
 	modules: [],

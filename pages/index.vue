@@ -1,9 +1,42 @@
 <template>
 	<div class="container">
 		<div class="intro">
+			<div class="title">
+				<h1>Paragliding experience</h1>
+			</div>
 			<div class="scroll">
 				<h2>scroll</h2>
 				<div class="bar"></div>
+			</div>
+		</div>
+
+		<div v-observe-visibility="{ callback: toursVisibility, once: true, intersection: { threshold: 0.3 } }" class="tours">
+			<div ref="text2" class="text">
+				<div>
+					<h2>Paragliding Tours</h2>
+					<p>Ower tours are for all levels of pilots.</p>
+					<p>Pure Excitement Gauranteed!</p>
+
+					<div class="row">
+						<p><i class="icon icon-star"></i> All Inclusive</p>
+						<p><i class="icon icon-location"></i> Cape Town, Porterville and more</p>
+						<p><i class="icon icon-credit-card"></i> Secure Payment</p>
+					</div>
+					<btn link="tours">
+						Learn more
+					</btn>
+				</div>
+			</div>
+			<div class="images">
+				<div class="image">
+					<img ref="img4" src="index/4.jpg" alt="" />
+				</div>
+				<div class="image">
+					<img ref="img5" src="index/5.jpg" alt="" />
+				</div>
+				<div class="image">
+					<img ref="img6" src="index/6.jpg" alt="" />
+				</div>
 			</div>
 		</div>
 		<div v-observe-visibility="{ callback: tandemVisibility, once: true, intersection: { threshold: 0.3 } }" class="tandem">
@@ -21,36 +54,16 @@
 			<div ref="text1" class="text">
 				<div>
 					<h2>Tandem Flights</h2>
-					<p>Standard Tandem Flight</p>
-					<p>GoPro Video & Photos Included</p>
-					<p>Pure Excitement Gauranteed</p>
+					<p>See the sky from difrent perspective.</p>
+					<p>Pure Excitement Gauranteed!</p>
+					<div class="row">
+						<p><i class="icon icon-video"></i> GoPro Video & Photos Included</p>
+						<p><i class="icon icon-location"></i> Cape Town, Porterville and more</p>
+						<p><i class="icon icon-credit-card"></i> Secure Payment</p>
+					</div>
 					<btn link="about">
 						Book now
 					</btn>
-				</div>
-			</div>
-		</div>
-		<div v-observe-visibility="{ callback: toursVisibility, once: true, intersection: { threshold: 0.3 } }" class="tours">
-			<div ref="text2" class="text">
-				<div>
-					<h2>Paragliding Tours</h2>
-					<p>Standard Tandem Flight</p>
-					<p>GoPro Video & Photos Included</p>
-					<p>Pure Excitement Gauranteed</p>
-					<btn link="tours">
-						Learn more
-					</btn>
-				</div>
-			</div>
-			<div class="images">
-				<div class="image">
-					<img ref="img4" src="index/4.jpg" alt="" />
-				</div>
-				<div class="image">
-					<img ref="img5" src="index/5.jpg" alt="" />
-				</div>
-				<div class="image">
-					<img ref="img6" src="index/6.jpg" alt="" />
 				</div>
 			</div>
 		</div>
@@ -117,6 +130,20 @@ export default {
 	align-items: center;
 	align-content: center;
 
+	.title {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+
+		h1 {
+			margin: 0;
+			color: white;
+			text-transform: uppercase;
+			font-size: 4.5em;
+		}
+	}
 	.scroll {
 		position: absolute;
 		bottom: 5%;
@@ -143,6 +170,59 @@ export default {
 			border-radius: 10px;
 			background: #fc4a1a;
 			margin: 0 10px;
+		}
+	}
+}
+.tours {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	position: relative;
+	height: 100vh;
+
+	.images {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+
+		position: relative;
+		width: 65vw;
+
+		.image {
+			position: relative;
+			img {
+				width: 100%;
+				object-fit: cover;
+				object-position: center;
+				box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.75);
+				border-radius: 5px;
+			}
+		}
+	}
+
+	.text {
+		width: 35vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		align-content: center;
+
+		h2 {
+			margin-bottom: 20px;
+			padding-bottom: 5px;
+			font-size: 2em;
+			border-bottom: 2px solid #fc4a1a;
+		}
+		.row {
+			p {
+				margin: 10px 0;
+				text-align: left;
+			}
 		}
 	}
 }
@@ -183,66 +263,20 @@ export default {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 		align-content: center;
 
 		h2 {
 			margin-bottom: 20px;
+			padding-bottom: 5px;
 			font-size: 2em;
+			border-bottom: 2px solid #fc4a1a;
 		}
-		p {
-			margin: 10px 0;
-			text-align: left;
-		}
-	}
-}
-
-.tours {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-
-	position: relative;
-	height: 100vh;
-
-	.images {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		align-content: center;
-
-		position: relative;
-		width: 65vw;
-
-		.image {
-			position: relative;
-			img {
-				width: 100%;
-				object-fit: cover;
-				object-position: center;
-				box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.75);
-				border-radius: 5px;
+		.row {
+			p {
+				margin: 10px 0;
+				text-align: left;
 			}
-		}
-	}
-
-	.text {
-		width: 35vw;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		align-content: center;
-
-		h2 {
-			margin-bottom: 20px;
-			font-size: 2em;
-		}
-		p {
-			margin: 10px 0;
-			text-align: left;
 		}
 	}
 }
@@ -290,6 +324,7 @@ export default {
 		.text {
 			width: 100vw;
 			margin: 30px 0;
+			align-items: center;
 		}
 		.text .btn {
 			margin: 20px auto;
