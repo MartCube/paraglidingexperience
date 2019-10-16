@@ -251,6 +251,13 @@ $colors: (
 		.social {
 			order: 1;
 		}
+		.website_map {
+			.links {
+				justify-content: center;
+				align-items: center;
+				align-content: center;
+			}
+		}
 		.arrow {
 			top: auto;
 			bottom: 20px;

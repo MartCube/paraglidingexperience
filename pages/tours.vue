@@ -35,7 +35,7 @@
 				</div>
 				<h2>Andreas Malecki tour</h2>
 				<h3><i class="icon icon-star"></i> All Inclusive</h3>
-				<h3><i class="icon icon-clock"></i> 7 days</h3>
+				<h3><i class="icon icon-clock"></i> 10 days</h3>
 				<h3><i class="icon icon-location"></i>Cape Town, Porterville</h3>
 				<h3>Read More...</h3>
 			</div>
@@ -62,7 +62,7 @@
 		</div>
 		<div class="intro">
 			<div class="text">
-				<h1>Tours</h1>
+				<h1>About our Tours</h1>
 				<p>Parapax Adventure Tours offer you an unforgettable paragliding experience. We pay personal attention to all our clients and our first priority is safety. There are constant safety briefings during each trip and no risks are taken. From day one when you enquire about the ideal paragliding holiday until the day we bid you farewell, our highly experienced paragliding tour guide will ensure you get the best out of everyday of your visit.</p>
 				<br />
 				<p>Our tours let you discover South Africa with a combination of flying and culture. We visit the most scenic flying spots as well as hidden away amazing places. Our paragliding tours are for pilots of all levels. Beginners recently qualified, hungry for more, or experienced pilots wanting to fly big xc distances. Our professional team will plan a tour according to your needs. Come alone or as a group. Arrive as clients, leave as friends.</p>
@@ -72,7 +72,7 @@
 			</div>
 		</div>
 
-		<h2>Ower tours are really all inclusive!</h2>
+		<h2>Our tours are really all inclusive!</h2>
 		<div class="table">
 			<div class="row">
 				<p><i class="icon icon-bed"></i> Accommodation 3-4 Star</p>
@@ -106,7 +106,6 @@ export default {
 			pageLeave(el, done)
 		},
 	},
-
 	data() {
 		return {
 			selectedTour: '',
@@ -124,24 +123,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.table {
-	display: flex;
-	margin: 50px 0;
-
-	.row {
-		width: 350px;
-		margin: 0 50px;
-		text-align: right;
-		i {
-			float: left;
-		}
-	}
-	p {
-		padding: 20px 0;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-	}
-}
-
 $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 .container {
 	margin: 0;
@@ -180,7 +161,7 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 
 	.calendar {
 		width: 100%;
-		height: 120px;
+		padding: 30px 0;
 		background-color: rgba(252, 74, 26, 0.8);
 
 		display: flex;
@@ -236,53 +217,6 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 	}
 }
 
-.intro {
-	width: 80%;
-	margin: 100px 0;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-
-	.text {
-		max-width: 60%;
-		padding: 0 50px;
-	}
-	.image {
-		position: relative;
-		img {
-			max-width: 100%;
-			object-fit: cover;
-			object-position: center;
-			box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.75);
-			border-radius: 5px;
-		}
-	}
-}
-
-.inclusive {
-	width: 80%;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-
-	.text {
-		margin: 0 50px;
-	}
-	.image {
-		position: relative;
-		img {
-			max-width: 400px;
-			object-fit: cover;
-			object-position: center;
-			border-radius: 5px;
-		}
-	}
-}
-
 .tours {
 	width: 80%;
 	margin: 5% 0;
@@ -292,6 +226,7 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 	justify-content: space-between;
 	align-items: center;
 	align-content: center;
+	flex-wrap: wrap;
 
 	.card {
 		display: flex;
@@ -299,6 +234,7 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 		justify-content: center;
 		align-items: flex-start;
 		align-content: center;
+		margin: 50px 0;
 
 		.image {
 			position: relative;
@@ -353,6 +289,101 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 			transform: scale(1.05) translateY(-10px);
 			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 		}
+	}
+}
+
+.intro {
+	width: 80%;
+	margin: 100px 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+	.text {
+		max-width: 60%;
+		padding: 0 50px;
+		h1 {
+			margin: 30px 0;
+		}
+	}
+	.image {
+		position: relative;
+		img {
+			max-width: 100%;
+			object-fit: cover;
+			object-position: center;
+			box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.75);
+			border-radius: 5px;
+		}
+	}
+}
+
+.table {
+	display: flex;
+	margin: 50px 0;
+
+	.row {
+		max-width: 350px;
+		margin: 0 50px;
+		text-align: right;
+		i {
+			float: left;
+		}
+	}
+	p {
+		padding: 20px 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	}
+}
+
+@media (max-width: 750px) {
+	.booking {
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		.title {
+			h1 {
+				font-size: 2em;
+				color: #343a40;
+			}
+		}
+		.calendar {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			align-content: center;
+
+			.input-data {
+				margin-bottom: 20px;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				align-content: center;
+			}
+			.btn {
+				margin-top: 20px;
+			}
+		}
+	}
+	.tours {
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+	.intro {
+		flex-direction: column-reverse;
+
+		.text {
+			max-width: 100%;
+			padding: 0;
+		}
+	}
+	.table {
+		flex-direction: column;
 	}
 }
 </style>

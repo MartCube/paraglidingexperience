@@ -313,6 +313,13 @@ export default {
 }
 
 @media (max-width: 750px) {
+	.intro {
+		.title {
+			h1 {
+				font-size: 2em;
+			}
+		}
+	}
 	.tandem,
 	.tours {
 		flex-direction: column;

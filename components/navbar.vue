@@ -192,6 +192,9 @@ export default {
 		justify-content: flex-start;
 		align-items: center;
 		align-content: center;
+		.links {
+			font-size: 1.5em;
+		}
 		.logo {
 			flex: none;
 		}
