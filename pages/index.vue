@@ -180,8 +180,7 @@ export default {
 	align-items: center;
 
 	position: relative;
-	height: 100vh;
-
+	margin: 10% 0;
 	.images {
 		display: flex;
 		flex-direction: row;
@@ -323,10 +322,10 @@ export default {
 	.tandem,
 	.tours {
 		flex-direction: column;
-		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		align-content: center;
+		flex-wrap: wrap;
 		.images,
 		.text {
 			width: 100vw;
