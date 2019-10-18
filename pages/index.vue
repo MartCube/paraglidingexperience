@@ -14,7 +14,7 @@
 			<div ref="text2" class="text">
 				<div>
 					<h2>Paragliding Tours</h2>
-					<p>Ower tours are for all levels of pilots.</p>
+					<p>Our tours are for all levels of pilots.</p>
 					<p>Pure Excitement Gauranteed!</p>
 
 					<div class="row">

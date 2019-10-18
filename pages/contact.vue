@@ -70,12 +70,18 @@ export default {
 }
 .contact {
 	max-width: 500px;
+	margin-top: 60px;
 	padding: 30px;
 	border-radius: 25px;
 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+	text-align: center;
 	background-color: rgba(255, 255, 255, 0.9);
-	-webkit-box-shadow: 2px 0px 20px 10px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 2px 0px 20px 10px rgba(0, 0, 0, 0.2);
 	box-shadow: 2px 0px 20px 10px rgba(0, 0, 0, 0.2);
 	.info {
 		display: flex;
@@ -193,7 +199,10 @@ export default {
 	.container {
 		margin-top: 10%;
 	}
+
 	.contact {
+		height: 100vh;
+		margin: 0;
 		padding: 20px;
 		border-radius: 0;
 	}

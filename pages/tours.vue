@@ -367,7 +367,8 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 		text-align: center;
 	}
 	.booking {
-		justify-content: flex-end;
+		margin-top: 60px;
+		justify-content: center;
 		align-items: center;
 		align-content: center;
 		.title {
@@ -377,7 +378,6 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-
 			padding: 10px;
 			.input-data {
 				margin-bottom: 20px;

@@ -1,12 +1,15 @@
 <template>
 	<nav class="navbar ">
 		<div class="logo">
-			<img src="/logo.png" alt="parapax" />
+			<n-link exact to="/"> <img src="/logo.png" alt="parapax"/></n-link>
 		</div>
 
 		<div class="links" :class="{ active: isActive }" @click="CloseMenu">
 			<n-link exact to="/">Home</n-link>
 			<n-link to="/tours">Tours</n-link>
+			<a href="https://www.parapax.co.za" target="_blank">
+				Tandems
+			</a>
 			<n-link to="/about">About us</n-link>
 			<n-link to="/gallery">Gallery</n-link>
 			<n-link to="/faq">FAQ</n-link>
