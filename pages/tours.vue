@@ -339,15 +339,18 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
 
 @media (max-width: 750px) {
+	.container {
+		margin: 0;
+	}
+	h2 {
+		text-align: center;
+	}
 	.booking {
 		justify-content: center;
 		align-items: center;
 		align-content: center;
 		.title {
-			h1 {
-				font-size: 2em;
-				color: #343a40;
-			}
+			display: none;
 		}
 		.calendar {
 			flex-direction: column;
@@ -373,6 +376,20 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 		justify-content: center;
 		align-items: center;
 		align-content: center;
+
+		.card {
+			width: 250px;
+			.text {
+				h2 {
+					font-size: 1.5em;
+				}
+			}
+			.image {
+				img {
+					max-width: 250px;
+				}
+			}
+		}
 	}
 	.intro {
 		flex-direction: column-reverse;

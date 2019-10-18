@@ -136,7 +136,7 @@ export default {
 		justify-content: center;
 		align-items: center;
 		align-content: center;
-
+		text-align: center;
 		h1 {
 			margin: 0;
 			color: white;

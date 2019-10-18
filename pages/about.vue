@@ -6,7 +6,6 @@
 			<p>Parapax is the market leader and original tandem paragliding company in Africa.</p>
 			<p>A team of highly experienced pilots and managers make this exciting, well thought out company a success.</p>
 			<p>The crew always put safety and fun first, standing well out amongst our competitors.</p>
-			<br />
 			<p>Today Stef has over 15 000 accident free flights and prides himself on running one of the world's best tandem paragliding businesses.</p>
 		</div>
 		<div class="team">

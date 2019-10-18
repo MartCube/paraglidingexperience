@@ -4,7 +4,6 @@
 			<div class="contact">
 				<div class="info">
 					<h2>What adventures you are planning?</h2>
-					<h3>Call us: <i class="icon-phone" />+(389) 72321151</h3>
 				</div>
 				<form class="form">
 					<h2>Write us a message:</h2>
@@ -70,7 +69,7 @@ export default {
 	align-content: center;
 }
 .contact {
-	width: 530px;
+	max-width: 500px;
 	padding: 30px;
 	border-radius: 25px;
 
@@ -85,12 +84,7 @@ export default {
 
 		h2 {
 			font-size: 2em;
-			margin-bottom: 30px;
-		}
-		h3 {
-			i {
-				color: #fc4a1a;
-			}
+			margin-bottom: 20px;
 		}
 	}
 
@@ -193,5 +187,15 @@ export default {
 	background: none !important;
 	height: 400px;
 	width: 100%;
+}
+
+@media (max-width: 750px) {
+	.container {
+		margin-top: 10%;
+	}
+	.contact {
+		padding: 20px;
+		border-radius: 0;
+	}
 }
 </style>
