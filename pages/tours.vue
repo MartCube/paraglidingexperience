@@ -8,8 +8,13 @@
 			<div class="calendar">
 				<no-ssr>
 					<div class="input-data">
+						<h3>Email</h3>
+						<input type="text" name="email" placeholder="email" />
+					</div>
+
+					<div class="input-data">
 						<h3>Available Tours</h3>
-						<v-select v-model="selectedTour" placeholder="Tours" :options="tours"></v-select>
+						<v-select v-model="selectedTour" :options="tours"></v-select>
 					</div>
 
 					<div class="input-data">
@@ -22,8 +27,11 @@
 						<v-date-picker v-model="DepartureDate" :min-date="ArrivalDate"></v-date-picker>
 					</div>
 
-					<div class="btn" @click="Submit">
-						Submit
+					<div class="input-data">
+						<h3>&nbsp;</h3>
+						<div class="btn" @click="Submit">
+							Submit
+						</div>
 					</div>
 				</no-ssr>
 			</div>
@@ -168,20 +176,33 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 		justify-content: space-around;
 		align-items: center;
 		align-content: center;
-		h3 {
-			color: white;
-			margin: 10px 20px;
-		}
+
 		span {
 			width: 120px;
 		}
 
+		input[type='text'] {
+			width: 200px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			&:focus {
+				outline: none;
+				box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.2);
+				border: 1px solid #fc4a1a;
+			}
+		}
 		.input-data {
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
-			align-items: center;
+			align-items: flex-start;
 			align-content: center;
-			flex-wrap: wrap;
+
+			h3 {
+				color: white;
+				margin: 10px 0;
+			}
 		}
 
 		.v-select {
@@ -193,7 +214,7 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 		.btn {
 			width: 120px;
 			padding: 7px;
-			margin: 0 20px;
+
 			border-radius: 5px;
 			// border: #fc4a1a 2px solid;
 			background-color: white;
@@ -346,7 +367,7 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 		text-align: center;
 	}
 	.booking {
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center;
 		align-content: center;
 		.title {
@@ -357,17 +378,13 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 			justify-content: center;
 			align-items: center;
 
-			align-content: center;
-
+			padding: 10px;
 			.input-data {
 				margin-bottom: 20px;
 				flex-direction: column;
-				justify-content: center;
+				justify-content: flex-start;
 				align-items: center;
 				align-content: center;
-			}
-			.btn {
-				margin-top: 20px;
 			}
 		}
 	}

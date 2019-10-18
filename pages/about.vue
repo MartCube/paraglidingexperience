@@ -74,16 +74,14 @@
 			</div>
 		</div>
 
-		<div class="btn" @click="openModal">
+		<!-- <div class="btn" @click="openModal">
 			open modal
 		</div>
-		<modal v-model="modal" />
+		<modal v-model="modal" /> -->
 	</div>
 </template>
 
 <script>
-import modal from '~/components/modal.vue'
-
 import { pageEnter, pageLeave } from '~/assets/animate'
 
 export default {
@@ -96,9 +94,6 @@ export default {
 		leave(el, done) {
 			pageLeave(el, done)
 		},
-	},
-	components: {
-		modal,
 	},
 	data() {
 		return {

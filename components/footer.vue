@@ -38,6 +38,7 @@
 			<div class="links">
 				<h3>Website Map:</h3>
 				<n-link to="/tours">Tours</n-link>
+				<n-link to="#">Tandems</n-link>
 				<n-link to="/about">About us</n-link>
 				<n-link to="/gallery/">Gallery</n-link>
 				<n-link to="/faq">FAQ</n-link>
