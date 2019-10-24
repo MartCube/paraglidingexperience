@@ -1,11 +1,13 @@
 <template>
 	<div class="container">
-		<div class="bg">
+		<div class="intro">
+			<div class="poster">
+				<img src="/contact.jpg" />
+			</div>
 			<div class="contact">
-				<div class="info">
-					<h2>What adventures you are planning?</h2>
-				</div>
 				<form class="form">
+					<h1>What adventures you are planning?</h1>
+					<h4>Call us: <i class="icon icon-whatsapp"></i> +(27) 828 814 724</h4>
 					<h2>Write us a message:</h2>
 					<div class="text_input">
 						<input class="input_anim" type="email" name="email" placeholder="e-mail" />
@@ -26,6 +28,7 @@
 				</form>
 			</div>
 		</div>
+
 		<div class="google_map">
 			<div class="mapouter">
 				<div class="gmap_canvas">
@@ -55,127 +58,127 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-	margin-top: 0;
+	margin: 0;
 }
-.bg {
-	width: 100%;
-	min-height: 100vh;
-	background-image: url('/contact.jpg');
 
+.intro {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-}
-.contact {
-	max-width: 500px;
-	margin-top: 60px;
-	padding: 30px;
-	border-radius: 25px;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-
-	text-align: center;
-	background-color: rgba(255, 255, 255, 0.9);
-	box-shadow: 2px 0px 20px 10px rgba(0, 0, 0, 0.2);
-	.info {
+	.poster {
 		display: flex;
-		flex-direction: column;
-		width: 100%;
+		max-width: 50vw;
+		height: 100vh;
 
-		h2 {
-			font-size: 2em;
-			margin-bottom: 20px;
+		img {
+			width: 100%;
 		}
 	}
 
-	.form {
+	.contact {
+		width: 50vw;
+		margin-top: 60px;
+		padding: 30px;
+		border-radius: 25px;
+
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
-		width: 100%;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
 
-		h2 {
-			margin: 30px 0;
+		.icon-whatsapp {
+			color: #25d366;
+			font-size: 1.5em;
 		}
-		// ## Input style ##
-		.text_input {
+		.form {
+			max-width: 500px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
 			width: 100%;
-			margin-bottom: 20px;
-			position: relative;
-			z-index: 2;
-		}
 
-		input {
-			width: 100%;
-			background: transparent;
-			margin-bottom: 10px;
-
-			color: #343a40;
-			font-family: 'Avenir-bold';
-			font-size: 1em;
-			letter-spacing: 2px;
-
-			&:focus {
-				outline: none;
+			h1 {
+				font-size: 2em;
 			}
-		}
-
-		.input_anim {
-			padding: 10px;
-			border: 0;
-			border-bottom: 3px solid #a9a9a9;
-
-			~ .focus-border {
-				position: absolute;
-				bottom: 10px;
-				left: 0;
-				width: 0;
-				height: 3px;
-
-				background: #fc4a1a;
-				transition: 0.5s;
+			h2 {
+				margin: 30px 0;
 			}
-
-			&:focus ~ .focus-border {
+			// ## Input style ##
+			.text_input {
 				width: 100%;
-				transition: 0.3s;
+				margin-bottom: 20px;
+				position: relative;
+				z-index: 2;
 			}
-		}
 
-		// ## Send button ##
-		.btn {
-			align-self: center;
-			width: 180px;
-			padding: 10px;
-			margin: 20px 0;
-			border-radius: 50px;
-			border: #fc4a1a 2px solid;
-			user-select: none;
+			input {
+				width: 100%;
+				background: transparent;
+				margin-bottom: 10px;
 
-			background-color: rgba(255, 255, 255, 0);
-			//background-image: linear-gradient(to right, #f7b733 0%, #fc4a1a 51%, #f7b733 100%);
+				color: #343a40;
+				font-family: 'Avenir-bold';
+				font-size: 1em;
+				letter-spacing: 2px;
 
-			box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.5);
-			text-decoration: none;
-			text-align: center;
-			color: #fc4a1a;
-			font-size: 1.2em;
-			cursor: pointer;
-
-			transition: all 0.3s ease;
-			&:hover {
-				background-color: #fc4a1a;
-				color: white;
+				&:focus {
+					outline: none;
+				}
 			}
-			&:active {
-				transform: translateY(2px);
-				box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+
+			.input_anim {
+				padding: 10px;
+				border: 0;
+				border-bottom: 3px solid #a9a9a9;
+
+				~ .focus-border {
+					position: absolute;
+					bottom: 10px;
+					left: 0;
+					width: 0;
+					height: 3px;
+
+					background: #fc4a1a;
+					transition: 0.5s;
+				}
+
+				&:focus ~ .focus-border {
+					width: 100%;
+					transition: 0.3s;
+				}
+			}
+
+			// ## Send button ##
+			.btn {
+				align-self: center;
+				width: 180px;
+				padding: 10px;
+				margin: 20px 0;
+				border-radius: 50px;
+				border: #fc4a1a 2px solid;
+				user-select: none;
+
+				background-color: rgba(255, 255, 255, 0);
+				//background-image: linear-gradient(to right, #f7b733 0%, #fc4a1a 51%, #f7b733 100%);
+
+				box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.5);
+				text-decoration: none;
+				text-align: center;
+				color: #fc4a1a;
+				font-size: 1.2em;
+				cursor: pointer;
+
+				transition: all 0.3s ease;
+				&:hover {
+					background-color: #fc4a1a;
+					color: white;
+				}
+				&:active {
+					transform: translateY(2px);
+					box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+				}
 			}
 		}
 	}
@@ -184,9 +187,9 @@ export default {
 .mapouter {
 	position: relative;
 	text-align: right;
+
 	height: 400px;
 	width: 100vw;
-	margin-top: 50px;
 }
 .gmap_canvas {
 	overflow: hidden;
@@ -196,15 +199,17 @@ export default {
 }
 
 @media (max-width: 750px) {
-	.container {
-		margin-top: 10%;
-	}
+	.intro {
+		flex-direction: column;
+		flex-wrap: wrap;
 
-	.contact {
-		height: 100vh;
-		margin: 0;
-		padding: 20px;
-		border-radius: 0;
+		.poster {
+			max-width: 100%;
+		}
+
+		.contact {
+			width: 100%;
+		}
 	}
 }
 </style>

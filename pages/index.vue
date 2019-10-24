@@ -119,7 +119,7 @@ export default {
 .intro {
 	width: 100%;
 	height: 100vh;
-	background-image: url('/landing.jpg');
+	background-image: url('/1.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -138,10 +138,10 @@ export default {
 		align-content: center;
 		text-align: center;
 		h1 {
-			margin: 0;
-			color: white;
+			margin-top: 350px;
+			color: #fc4a1a;
 			text-transform: uppercase;
-			font-size: 4.5em;
+			font-size: 4.2em;
 		}
 	}
 	.scroll {
@@ -154,7 +154,7 @@ export default {
 		align-content: center;
 
 		h2 {
-			color: white;
+			color: #fc4a1a;
 			text-transform: uppercase;
 			font-size: 1em;
 			letter-spacing: 0.1em;
@@ -287,6 +287,7 @@ export default {
 	align-items: center;
 	align-content: center;
 	flex-wrap: wrap;
+	margin-bottom: 50px;
 
 	img {
 		max-width: 100%;

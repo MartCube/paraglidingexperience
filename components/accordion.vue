@@ -80,7 +80,7 @@ export default {
 		color: #ff1461;
 	}
 }
-@media (max-width: 400px) {
+@media (max-width: 750px) {
 	.message {
 		width: 95%;
 	}

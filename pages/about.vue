@@ -15,7 +15,7 @@
 					<img src="/about/1.jpg" alt="" />
 					<div class="color-overlay"></div>
 					<div class="text1">
-						<h2>Vincent Valcasara</h2>
+						<h2>Susan de Villiers</h2>
 					</div>
 					<div class="text2">
 						<p>Tandem Pilot</p>
@@ -193,7 +193,7 @@ $transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
 				}
 				.text1 {
 					background: rgba(0, 0, 0, 0);
-					transform: translateY(-35px);
+					transform: translateY(-40px);
 				}
 				.text2 {
 					opacity: 1;

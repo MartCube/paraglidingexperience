@@ -138,7 +138,7 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 .booking {
 	width: 100%;
 	height: 100vh;
-	background-image: url('/2.jpg');
+	background-image: url('/tours.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -162,7 +162,7 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 			margin: 0;
 			color: white;
 			text-transform: uppercase;
-			font-size: 5em;
+			font-size: 4.2em;
 			text-align: left;
 		}
 	}
@@ -183,7 +183,7 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 
 		input[type='text'] {
 			width: 200px;
-			padding: 10px;
+			padding: 8px;
 			border: 1px solid #ccc;
 			border-radius: 5px;
 			&:focus {

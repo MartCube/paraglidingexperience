@@ -63,7 +63,7 @@ export default {
 		flex-direction: row;
 		justify-content: space-around;
 		align-content: space-around;
-		flex-basis: 50%;
+		flex-basis: 60%;
 
 		a {
 			text-decoration: none;
@@ -102,7 +102,7 @@ export default {
 			align-content: center;
 			align-items: center;
 
-			padding: 10% 0;
+			padding: 20% 0;
 			background-color: rgba(252, 74, 26, 0.85);
 
 			position: fixed;
@@ -123,8 +123,8 @@ export default {
 
 	.logo {
 		display: flex;
-		flex-basis: 50%;
-		padding-left: 20px;
+		flex-basis: 40%;
+		padding-left: 50px;
 		color: white;
 		img {
 			height: 50px;
@@ -196,10 +196,11 @@ export default {
 		align-items: center;
 		align-content: center;
 		.links {
-			font-size: 1.5em;
+			font-size: 1.4em;
 		}
 		.logo {
 			flex: none;
+			padding-left: 10px;
 		}
 		.links {
 			display: none;
