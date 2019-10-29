@@ -316,7 +316,9 @@ export default {
 	.intro {
 		.title {
 			h1 {
+				margin: 0;
 				font-size: 2em;
+				text-align: center;
 			}
 		}
 	}

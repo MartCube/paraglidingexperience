@@ -3,43 +3,108 @@
 		<h1>Frequently Asked Questions</h1>
 		<accordion>
 			<template v-slot:header>
-				How and when can I book?
+				How many people can join a tour?
 			</template>
 			<template v-slot:body>
-				Call On the day, or in advance! Booking is best done by calling us on +27 (0)82 881 4724 for immediate attention, but an SMS or WhatsApp is also ok. Email booking is also acceptable, but we don't always immediately respond to email as we are often out flying, so calling is best. We require a mobile cell phone number for you to make a booking (even an international number). This is to reconfirm the booking on the morning of flight (we always do this as a matter of courtesy) and to inform you if there are unexpected weather changes. We don't schedule flights by email, so please do things telephonically. You can call and book spontaneously, on the day, but of course advanced booking always ensures you a place. We get really busy in the summer months and recommend advance booking. Always try to fly earlier in your time in Cape Town as our sport is weather dependent. Don't wait for a specific time on a specific day... Always try to fly on a morning on the first days that
-				you are in our brilliant city. No deposit is generally required (only for groups or in peak season) and payment is cash on the day. We accept South African Rands, Euros and USD.
+				We try to keep it maximum 14 people on a trip but the average is 10. <br />
+				want to give more personal attention from our paragliding guides and make it easier to do tours.
 			</template>
 		</accordion>
 		<accordion>
 			<template v-slot:header>
-				Pricing?
+				Are the tours only for paragliding pilots?
 			</template>
 			<template v-slot:body>
-				Tandem Paragliding Flights = R1300pp (Standard Paragliding Flight) Tandem Paramotoring Flights = R1250pp (Standard Paramotoring Flight) 20Mins. Paramotoring Flights = R1450pp (Guaranteed 20mins. Paramotoring Flight) Longer Flights = R1850pp (Paragliding or Paramotoring) Optional : In-flight photos and videos, given on a 2 or 4GB SD card, adapter and protective casing that you get to keep – >> R300pp. Please note that the pictures and video taken by the pilots in flight are simply an optional extra on the flight and Parapax cannot be held responsible for the success of these. Technical glitches do sometimes (but vet rarely) occur and Parapax will simply refund you on the picture and video option. Optional Return Shuttle (Hotel, fly with us and back to your hotel -return transfers). OR Hotel, fly, Table Mountain, beaches, city, Waterfront >> R200 or R150pp depending on number of candidate students and distance. Gift Vouchers are also available
+				No! We would love for the paragliding pilots’ family and friends to join. We do different daily tours and don’t just focus on paragliding.
 			</template>
 		</accordion>
 		<accordion>
 			<template v-slot:header>
-				How can I pay?
+				Do your tours include international airfare?
 			</template>
 			<template v-slot:body>
-				1. Best and easiest is cash on the day Cash before or after the flight – we accept SA Rands, USD, Euros (Fair exchange rates). Credit Card before the flight by internet – Paygate from our booking page. Electronic Transfer into our bank account – Investec Bank, Current Acc. 10010667097, branch 580105 ( 00 ), credit S Juncker. For group bookings and at really busy times, we may ask you for your credit card details only as a booking assurance on our part (for no shows). 2. Paypal (online) If you don’t have a pay pal account please do the following in order to make a payment: Create a PayPal account by going to https://www.paypal.com/ and securely link your bank, credit, and debit card details. When you check out online at millions of sites, just look for the PayPal button. Log into PayPal and speed through checkout securely with just an email and password. We have a No fly, no charge policy for bookings.
+				Travelers arrive from all over the world to begin our tours and it is not possible to include international airfare in our prices. We would be happy to help you arrange flights. Just ask for an air quote when making your booking.
 			</template>
 		</accordion>
 		<accordion>
 			<template v-slot:header>
-				Where do we meet?
+				How experienced must I be in paragliding to go on this trip?
 			</template>
 			<template v-slot:body>
-				WE ALWAYS MEET AT THE VERY END OF SIGNAL HILL ROAD, under the first thorn tree, on the take-off site, at the parking place, (NOT at the Lions head parking lot) when we are flying in Cape town. Meet our friendly Parapax staff (look for our orange branded t-shirts and red caps). Directions: From the city of Cape town, highways and waterfront, drive up towards the table mountain cable-car station. You get to a turning circle, called Kloof Nek. Opposite Tafelberg road ( where the Table Mountain road actually begins) is signal hill road. Drive ALL the way to the very end of signal hill road (3.8km from Kloof Nek turning circle).Easy to find and a 5- 10 minute drive from Table Mountain’s lower cable car, Camps Bay / Clifton and the City of Cape Town. GPS co-ordinates: 33°55’03.7″S 18°24’08.5″E We look forward to welcoming you there and taking you flying!
+				Our paragliding tours are for pilots of all levels. Beginners recently qualified, hungry for more, or experienced pilots wanting to fly big xc distances
+			</template>
+		</accordion>
+
+		<accordion>
+			<template v-slot:header>
+				I'm a single traveller, will I be charged extra for a single room?
+			</template>
+			<template v-slot:body>
+				We do charge extra for a single room but there normally are lots of single travellers and you can share with someone if you want. Travellers of the same sex will share.
 			</template>
 		</accordion>
 		<accordion>
 			<template v-slot:header>
-				What must I bring?
+				Can you provide me with a list of the hotels we will be staying at?
 			</template>
 			<template v-slot:body>
-				Comfortable, closed running / walking shoes / Hiking boots (Takkies / trainers / joggers / sneakers), NOT Crocs, sandals, flip flops, nothing that flop or flips please! If you dont have any, tell us in advance and we will supply some of ours at no charge.... you dont need to go and buy shoes especially... we do have clean, extra pairs of closed shoes. - T-shirt and Long sleeved jersey / Fleece / Windstopper – Long or short pants - Sun-block (sunscreen) and hat (it’s often sunny and we don’t want you getting sunburned!) - Drinking Water
+				We use a variety of hotels en-route and so a complete list of hotels won't be provided until day 1 of your tour. If your family requires contact information, or in case of emergency, please have them phone +27797724652. this number can be reached 24 hours a day, 7 days a week.
+			</template>
+		</accordion>
+		<accordion>
+			<template v-slot:header>
+				Can I join a tour late or leave it early?
+			</template>
+			<template v-slot:body>
+				It's extremely difficult if not impossible to join a tour after it has begun. It is possible to leave a tour early however you will be responsible for your own arrangements from the moment you decide to leave the tour. You would also be responsible for all costs associated with joining a tour late or leaving one early. If you feel this may be necessary please contact us directly.
+			</template>
+		</accordion>
+		<accordion>
+			<template v-slot:header>
+				Are airport transfers included?
+			</template>
+			<template v-slot:body>
+				Yes. We will pick you up at the airport and transfer you to your hotel and drop you off and the airport after the tour.
+			</template>
+		</accordion>
+		<accordion>
+			<template v-slot:header>
+				What type of transportation is used on your tours?
+			</template>
+			<template v-slot:body>
+				We will transport you and your luggage (paragliding gear) in a minibus. We will transport you on sightseeing trips and we will do recovery for you when you fly far.
+			</template>
+		</accordion>
+		<accordion>
+			<template v-slot:header>
+				What is the most appropriate type of luggage to bring?
+			</template>
+			<template v-slot:body>
+				We strongly recommend bringing a backpack or duffel bag, as suitcases can be cumbersome and difficult to store in buses, under seats, etc. Keep in mind that the paragliding pilots on the trip have a lot of luggage so please pack sensibly.
+			</template>
+		</accordion>
+		<accordion>
+			<template v-slot:header>
+				Who are my travelling companions?
+			</template>
+			<template v-slot:body>
+				Most of the people on this trip share an adventurous spirit and are interested in paragliding.
+			</template>
+		</accordion>
+		<accordion>
+			<template v-slot:header>
+				Can I book extra nights of hotel accommodation before or after my tour?
+			</template>
+			<template v-slot:body>
+				Yes, in most cases we can arrange additional accommodation at our starting or ending hotels.
+			</template>
+		</accordion>
+		<accordion>
+			<template v-slot:header>
+				What is the best time to visit South Africa for flying?
+			</template>
+			<template v-slot:body>
+				The summer months from September to April.
 			</template>
 		</accordion>
 	</div>

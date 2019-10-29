@@ -46,11 +46,16 @@ export default {
 		background-color: #343a40;
 		color: white;
 		padding: 10px;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
 		h3 {
 			display: inline-block;
+			width: 80%;
 		}
 		i {
-			float: right;
 			padding: 2px 0;
 			transition: 0.5s ease all;
 		}
@@ -67,7 +72,7 @@ export default {
 		opacity: 1;
 		transition: 0.5s ease all;
 		p {
-			padding: 20px 10px;
+			padding: 15px;
 		}
 	}
 	.colapseAnim {

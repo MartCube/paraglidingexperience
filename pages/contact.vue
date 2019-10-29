@@ -1,32 +1,27 @@
 <template>
 	<div class="container">
-		<div class="intro">
-			<div class="poster">
-				<img src="/contact.jpg" />
-			</div>
-			<div class="contact">
-				<form class="form">
-					<h1>What adventures you are planning?</h1>
-					<h4>Call us: <i class="icon icon-whatsapp"></i> +(27) 828 814 724</h4>
-					<h2>Write us a message:</h2>
-					<div class="text_input">
-						<input class="input_anim" type="email" name="email" placeholder="e-mail" />
-						<span class="focus-border" />
-					</div>
-					<div class="text_input">
-						<input class="input_anim" type="text" name="subject" placeholder="subject" />
-						<span class="focus-border" />
-					</div>
-					<div class="text_input">
-						<input class="input_anim" type="text" name="message" placeholder="message" />
-						<span class="focus-border" />
-					</div>
+		<div class="contact">
+			<form class="form">
+				<h1>What adventures you are planning?</h1>
+				<h4>Call us: <i class="icon icon-whatsapp"></i> +(27) 828 814 724</h4>
+				<h2>Write us a message:</h2>
+				<div class="text_input">
+					<input class="input_anim" type="email" name="email" placeholder="e-mail" />
+					<span class="focus-border" />
+				</div>
+				<div class="text_input">
+					<input class="input_anim" type="text" name="subject" placeholder="subject" />
+					<span class="focus-border" />
+				</div>
+				<div class="text_input">
+					<input class="input_anim" type="text" name="message" placeholder="message" />
+					<span class="focus-border" />
+				</div>
 
-					<a class="btn" href="#">
-						Send
-					</a>
-				</form>
-			</div>
+				<a class="btn" href="#">
+					Send
+				</a>
+			</form>
 		</div>
 
 		<div class="google_map">
@@ -61,124 +56,106 @@ export default {
 	margin: 0;
 }
 
-.intro {
+.contact {
+	min-height: 100vh;
+	margin-top: 60px;
+	padding: 30px;
+
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-	.poster {
-		display: flex;
-		max-width: 50vw;
-		height: 100vh;
-
-		img {
-			width: 100%;
-		}
+	.icon-whatsapp {
+		color: #25d366;
+		font-size: 1.5em;
 	}
-
-	.contact {
-		width: 50vw;
-		margin-top: 60px;
-		padding: 30px;
-		border-radius: 25px;
-
+	.form {
+		max-width: 500px;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		align-content: center;
+		align-items: flex-start;
+		width: 100%;
 
-		.icon-whatsapp {
-			color: #25d366;
-			font-size: 1.5em;
+		h1 {
+			font-size: 2em;
 		}
-		.form {
-			max-width: 500px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
+		h2 {
+			margin: 30px 0;
+		}
+		// ## Input style ##
+		.text_input {
 			width: 100%;
+			margin-bottom: 20px;
+			position: relative;
+			z-index: 2;
+		}
 
-			h1 {
-				font-size: 2em;
+		input {
+			width: 100%;
+			background: transparent;
+			margin-bottom: 10px;
+
+			color: #343a40;
+			font-family: 'Avenir-bold';
+			font-size: 1em;
+			letter-spacing: 2px;
+
+			&:focus {
+				outline: none;
 			}
-			h2 {
-				margin: 30px 0;
+		}
+
+		.input_anim {
+			padding: 10px;
+			border: 0;
+			border-bottom: 3px solid #a9a9a9;
+
+			~ .focus-border {
+				position: absolute;
+				bottom: 10px;
+				left: 0;
+				width: 0;
+				height: 3px;
+
+				background: #fc4a1a;
+				transition: 0.5s;
 			}
-			// ## Input style ##
-			.text_input {
+
+			&:focus ~ .focus-border {
 				width: 100%;
-				margin-bottom: 20px;
-				position: relative;
-				z-index: 2;
+				transition: 0.3s;
 			}
+		}
 
-			input {
-				width: 100%;
-				background: transparent;
-				margin-bottom: 10px;
+		// ## Send button ##
+		.btn {
+			align-self: center;
+			width: 180px;
+			padding: 10px;
+			margin: 20px 0;
+			border-radius: 50px;
+			border: #fc4a1a 2px solid;
+			user-select: none;
 
-				color: #343a40;
-				font-family: 'Avenir-bold';
-				font-size: 1em;
-				letter-spacing: 2px;
+			background-color: rgba(255, 255, 255, 0);
+			//background-image: linear-gradient(to right, #f7b733 0%, #fc4a1a 51%, #f7b733 100%);
 
-				&:focus {
-					outline: none;
-				}
+			box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.5);
+			text-decoration: none;
+			text-align: center;
+			color: #fc4a1a;
+			font-size: 1.2em;
+			cursor: pointer;
+
+			transition: all 0.3s ease;
+			&:hover {
+				background-color: #fc4a1a;
+				color: white;
 			}
-
-			.input_anim {
-				padding: 10px;
-				border: 0;
-				border-bottom: 3px solid #a9a9a9;
-
-				~ .focus-border {
-					position: absolute;
-					bottom: 10px;
-					left: 0;
-					width: 0;
-					height: 3px;
-
-					background: #fc4a1a;
-					transition: 0.5s;
-				}
-
-				&:focus ~ .focus-border {
-					width: 100%;
-					transition: 0.3s;
-				}
-			}
-
-			// ## Send button ##
-			.btn {
-				align-self: center;
-				width: 180px;
-				padding: 10px;
-				margin: 20px 0;
-				border-radius: 50px;
-				border: #fc4a1a 2px solid;
-				user-select: none;
-
-				background-color: rgba(255, 255, 255, 0);
-				//background-image: linear-gradient(to right, #f7b733 0%, #fc4a1a 51%, #f7b733 100%);
-
-				box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.5);
-				text-decoration: none;
-				text-align: center;
-				color: #fc4a1a;
-				font-size: 1.2em;
-				cursor: pointer;
-
-				transition: all 0.3s ease;
-				&:hover {
-					background-color: #fc4a1a;
-					color: white;
-				}
-				&:active {
-					transform: translateY(2px);
-					box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-				}
+			&:active {
+				transform: translateY(2px);
+				box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 			}
 		}
 	}
@@ -199,17 +176,5 @@ export default {
 }
 
 @media (max-width: 750px) {
-	.intro {
-		flex-direction: column;
-		flex-wrap: wrap;
-
-		.poster {
-			max-width: 100%;
-		}
-
-		.contact {
-			width: 100%;
-		}
-	}
 }
 </style>
