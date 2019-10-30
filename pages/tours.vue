@@ -37,35 +37,73 @@
 			</div>
 		</div>
 		<div class="tours">
-			<div class="card" @click="$router.push('/malecki_tour')">
+			<div class="card">
 				<div class="image">
-					<img src="/tours/1.jpg" alt="" />
+					<img src="/tours/3.jpg" />
 				</div>
-				<h2>Andreas Malecki tour</h2>
-				<h3><i class="icon icon-star"></i> All Inclusive</h3>
-				<h3><i class="icon icon-clock"></i> 10 days</h3>
-				<h3><i class="icon icon-location"></i>Cape Town, Porterville</h3>
-				<h3>Read More...</h3>
+				<div class="about">
+					<h2>Standard tour</h2>
+					<p>Parapax in association with the one and only Andreas Malecki will do XC and competition guided tour.</p>
+					<p>This tour is for pilots who want to dramatically improve their XC and competition flying skills.</p>
+				</div>
+				<div class="info">
+					<p>
+						<span>capacity <i class="icon icon-man"></i></span>14 people
+					</p>
+					<p>
+						<span>duration <i class="icon icon-clock"></i></span>10 days
+					</p>
+					<p>
+						<span>location <i class="icon icon-location"></i></span>Portevile
+					</p>
+					<p>prize: 1200 $</p>
+				</div>
 			</div>
-			<div class="card" @click="$router.push('/bikefly_tour')">
+			<div class="card">
 				<div class="image">
-					<img src="/tours/2.jpg" alt="" />
+					<img src="/tours/2.jpg" />
 				</div>
-				<h2>Bike and Fly tour</h2>
-				<h3><i class="icon icon-star"></i> All Inclusive</h3>
-				<h3><i class="icon icon-clock"></i> 7 & 10 days</h3>
-				<h3><i class="icon icon-location"></i>Cape Town, Porterville, Hermanus</h3>
-				<h3>Read More...</h3>
+				<div class="about">
+					<h2>Bike and Fly Tour</h2>
+					<p>Come and indulge your senses and experience the true freedom of journey!</p>
+					<p>A motorbike adventure combined with paragliding.</p>
+					<p>Luggage and paragliders are transported in the support vehicle and non motorcyclists can ride in the support vehicle. Motorbike licence compulsory.</p>
+				</div>
+				<div class="info">
+					<p>
+						<span>capacity <i class="icon icon-man"></i></span>14 people
+					</p>
+					<p>
+						<span>duration <i class="icon icon-clock"></i></span>7 & 10 days
+					</p>
+					<p>
+						<span>location <i class="icon icon-location"></i></span>South Africa
+					</p>
+					<p>prize: 1200 $</p>
+				</div>
 			</div>
-			<div class="card" @click="$router.push('/standard_tour')">
+			<div class="card">
 				<div class="image">
-					<img src="/tours/3.jpg" alt="" />
+					<img src="/tours/1.jpg" />
 				</div>
-				<h2>Standard tour</h2>
-				<h3><i class="icon icon-star"></i> All Inclusive</h3>
-				<h3><i class="icon icon-clock"></i> 7 & 10 & 14 days</h3>
-				<h3><i class="icon icon-location"></i>Cape Town, Porterville, Hermanus</h3>
-				<h3>Read More...</h3>
+				<div class="about">
+					<h2>Pepe Malecki Tour</h2>
+					<p>Parapax in association with the one and only Andreas Malecki.</p>
+					<p>You will fly together with highly experienced pilots who will coach you and analyze your skills.</p>
+					<p>This tour is for those who want to dramatically improve their XC and competition flying skills.</p>
+				</div>
+				<div class="info">
+					<p>
+						<span>capacity <i class="icon icon-man"></i></span>14 people
+					</p>
+					<p>
+						<span>duration <i class="icon icon-clock"></i></span>7 days
+					</p>
+					<p>
+						<span>location <i class="icon icon-location"></i></span>Portevile
+					</p>
+					<p>prize: 1200 $</p>
+				</div>
 			</div>
 		</div>
 		<div class="intro">
@@ -80,7 +118,7 @@
 			</div>
 		</div>
 
-		<h2>Our tours are really all inclusive!</h2>
+		<h1>Our tours are really all inclusive!</h1>
 		<div class="table">
 			<div class="row">
 				<p><i class="icon icon-bed"></i> Accommodation 3-4 Star</p>
@@ -239,76 +277,70 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
 
 .tours {
-	width: 80%;
 	margin: 5% 0;
 
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	align-content: center;
 	flex-wrap: wrap;
 
 	.card {
+		max-width: 1150px;
+		margin: 50px 0;
+
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: flex-start;
 		align-content: center;
-		margin: 50px 0;
+
+		border: 1px solid #ccc;
 
 		.image {
 			position: relative;
+			align-self: center;
+			max-width: 350px;
 			img {
-				max-width: 300px;
+				width: 100%;
 				object-fit: cover;
 				object-position: center;
-				box-shadow: 0 -5px 40px -14px rgba(0, 0, 0, 0.75);
 				border-radius: 5px;
 			}
 		}
-		h2 {
-			border-bottom: 2px solid #fc4a1a;
-			margin: 10px;
-			font-size: 1.8em;
-		}
-		h3 {
-			margin-left: 10px;
-		}
-		h3:last-child {
-			color: #fc4a1a;
-			margin: 5px 30px;
-		}
-		.btn {
-			width: 120px;
-			padding: 7px;
-			margin: 10px;
-			border-radius: 5px;
-			border: #343a40 2px solid;
-			background-color: rgba(255, 255, 255, 0);
-			box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.2);
+		.about {
+			width: 400px;
+			padding: 0 25px;
+			padding-top: 25px;
 
-			text-decoration: none;
-			text-align: center;
-			color: #343a40;
-			font-size: 1.2em;
-			cursor: pointer;
-			user-select: none;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			align-content: center;
 
-			transition: all 0.3s ease;
-			&:hover {
-				box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-			}
-			&:active {
-				box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+			h2 {
+				margin-bottom: 20px;
 			}
 		}
+		.info {
+			width: 300px;
+			padding-top: 25px;
 
-		cursor: pointer;
-		transition: all 0.3s;
-		&:hover {
-			transform: scale(1.05) translateY(-10px);
-			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			align-content: center;
+			p {
+				text-align: right;
+				width: 80%;
+				padding: 10px 0;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+				span {
+					float: left;
+				}
+			}
 		}
 	}
 }
@@ -393,18 +425,21 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 		justify-content: center;
 		align-items: center;
 		align-content: center;
-
 		.card {
-			width: 250px;
-			.text {
-				h2 {
-					font-size: 1.5em;
-				}
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			border: none;
+
+			.about,
+			.info {
+				width: 350px;
 			}
-			.image {
-				img {
-					max-width: 250px;
-				}
+			.info {
+				justify-content: center;
+				align-items: center;
+				align-content: center;
 			}
 		}
 	}

@@ -3,7 +3,7 @@
 		<div class="contact">
 			<form class="form">
 				<h1>What adventures you are planning?</h1>
-				<h4>Call us: <i class="icon icon-whatsapp"></i> +(27) 828 814 724</h4>
+				<h4>Call us: <i class="icon icon-whatsapp"></i> +(27) 797 724 652</h4>
 				<h2>Write us a message:</h2>
 				<div class="text_input">
 					<input class="input_anim" type="email" name="email" placeholder="e-mail" />
