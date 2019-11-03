@@ -299,13 +299,14 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 
 		.image {
 			position: relative;
+			display: flex;
 			align-self: center;
 			max-width: 350px;
 			img {
 				width: 100%;
+				height: 100%;
 				object-fit: cover;
 				object-position: center;
-				border-radius: 5px;
 			}
 		}
 		.about {

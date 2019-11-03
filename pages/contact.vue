@@ -1,7 +1,10 @@
 <template>
 	<div class="container">
 		<div class="contact">
-			<form class="form">
+			<form class="form" name="contact" action="/submit" netlify-honeypot="bot-field" method="POST" autocomplete="off" netlify>
+				<!-- eslint-disable-next-line -->
+				<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+
 				<h1>What adventures you are planning?</h1>
 				<h4>Call us: <i class="icon icon-whatsapp"></i> +(27) 797 724 652</h4>
 				<h2>Write us a message:</h2>
@@ -18,7 +21,7 @@
 					<span class="focus-border" />
 				</div>
 
-				<a class="btn" href="#">
+				<a class="btn" type="submit" value="Send message" @click="submit">
 					Send
 				</a>
 			</form>
@@ -48,12 +51,20 @@ export default {
 			pageLeave(el, done)
 		},
 	},
+	methods: {
+		submit() {
+			console.log('submit')
+		},
+	},
 }
 </script>
 
 <style lang="scss" scoped>
 .container {
 	margin: 0;
+}
+.hidden {
+	display: none;
 }
 
 .contact {
