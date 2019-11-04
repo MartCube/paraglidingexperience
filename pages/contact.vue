@@ -9,7 +9,7 @@
 				<h4>Call us: <i class="icon icon-whatsapp"></i> +(27) 797 724 652</h4>
 				<h2>Write us a message:</h2>
 				<div class="text_input">
-					<input class="input_anim" type="email" name="email" placeholder="e-mail" />
+					<input name="email" type="email" placeholder="e-mail" class="input_anim" />
 					<span class="focus-border" />
 				</div>
 				<div class="text_input">
@@ -27,13 +27,13 @@
 			</form>
 		</div>
 
-		<div class="google_map">
+		<!-- <div class="google_map">
 			<div class="mapouter">
 				<div class="gmap_canvas">
 					<iframe id="gmap_canvas" width="100%" height="400" src="https://maps.google.com/maps?q=cape%20town&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </template>
 
