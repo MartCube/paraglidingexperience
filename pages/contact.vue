@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div class="contact">
-			<form ref="contact" class="form" name="contact" action="/submit" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off">
+			<form ref="contact" class="form" name="contact" action="/submit" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off" netlify>
 				<!-- eslint-disable-next-line -->
 				<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
 
@@ -10,6 +10,7 @@
 				<h2>Write us a message:</h2>
 				<div class="text_input">
 					<input name="email" type="email" placeholder="e-mail" class="input_anim" />
+					<input class="input_anim" type="email" name="email" placeholder="e-mail" />
 					<span class="focus-border" />
 				</div>
 				<div class="text_input">
