@@ -17,6 +17,7 @@
 		"lazysizes": "^5.1.2",
 		"nuxt": "^2.8.1",
 		"v-calendar": "^1.0.0-beta.22",
+		"vee-validate": "^3.0.11",
 		"vue-observe-visibility": "^0.4.4",
 		"vue-select": "^3.2.0"
 	},

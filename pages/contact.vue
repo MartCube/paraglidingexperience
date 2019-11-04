@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div class="contact">
-			<form class="form" name="contact" action="/submit" netlify-honeypot="bot-field" method="POST" autocomplete="off" netlify>
+			<form ref="contact" class="form" name="contact" action="/submit" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off">
 				<!-- eslint-disable-next-line -->
 				<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
 
@@ -52,8 +52,16 @@ export default {
 		},
 	},
 	methods: {
-		submit() {
+		submit: function() {
 			console.log('submit')
+			this.$refs.contact.submit()
+			// this.$validator.validateAll().then(result => {
+			// 	if (result) {
+			// 		this.$refs.contact.submit()
+			// 	} else {
+			// 		return
+			// 	}
+			// })
 		},
 	},
 }
