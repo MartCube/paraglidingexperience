@@ -1,10 +1,7 @@
 <template>
 	<div class="container">
 		<div class="contact">
-			<form ref="contact" class="form" name="contact" action="/submit" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off" @submit.prevent="handleSubmit">
-				<!-- eslint-disable-next-line -->
-				<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
-
+			<form ref="contact" class="form" name="contact" data-netlify="true" method="POST" autocomplete="off" @submit.prevent="handleSubmit">
 				<h1>What adventures you are planning?</h1>
 				<h4>Call us: <i class="icon icon-whatsapp"></i> +(27) 797 724 652</h4>
 				<h2>Write us a message:</h2>
