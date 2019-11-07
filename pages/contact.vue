@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div class="contact">
-			<form ref="contact" class="form" name="contact" data-netlify="true" method="POST" autocomplete="off" @submit.prevent="handleSubmit">
+			<form ref="contact" class="form" name="contact" data-netlify="true" method="POST" autocomplete="off">
 				<h1>What adventures you are planning?</h1>
 				<h4>Call us: <i class="icon icon-whatsapp"></i> +(27) 797 724 652</h4>
 				<h2>Write us a message:</h2>
@@ -21,12 +21,9 @@
 					<span class="focus-border"></span>
 				</div>
 
-				<!-- <a class="btn" type="submit" value="Send message" @click="submit">
+				<a class="btn" type="submit" @click="submit">
 					Send
-				</a> -->
-				<button type="submit">
-					submit
-				</button>
+				</a>
 			</form>
 		</div>
 
@@ -65,9 +62,6 @@ export default {
 			// 		return
 			// 	}
 			// })
-		},
-		handleSubmit() {
-			console.log('handleSubmit')
 		},
 	},
 }
