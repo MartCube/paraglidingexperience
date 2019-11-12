@@ -2,7 +2,8 @@
 	<div class="container">
 		<div class="contact">
 			<ValidationObserver ref="observer">
-				<form ref="contact" class="form" name="contact" action="/submit" data-netlify="true" method="POST" autocomplete="off" @submit.prevent="submit()">
+				<!-- <form ref="contact" class="form" name="contact" action="/submit" data-netlify="true" method="POST" autocomplete="off" @submit.prevent="submit()"> -->
+				<form ref="contact" class="form" name="contact" action="/submit" @submit.prevent="submit()">
 					<h1>What adventures you are planning?</h1>
 					<!-- <h3>Call us: <i class="icon icon-whatsapp"></i> +(27) 797 724 652</h3> -->
 					<h3>Write us a message:</h3>
