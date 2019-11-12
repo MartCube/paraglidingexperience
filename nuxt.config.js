@@ -15,7 +15,7 @@ module.exports = {
 	css: ['~/assets/style.scss'],
 
 	// Plugins to load before mounting the App
-	plugins: [{ src: `~plugins/ObserveVisibility`, ssr: true }, { src: '~/plugins/v-calendar.js', ssr: false }, { src: '~/plugins/v-select.js', ssr: false }, { src: `~/plugins/lazysizes.client.js`, ssr: true }],
+	plugins: [{ src: `~plugins/ObserveVisibility`, ssr: true }, { src: '~/plugins/v-calendar.js', ssr: false }, { src: '~/plugins/v-select.js', ssr: false }, { src: `~/plugins/lazysizes.client.js`, ssr: true }, { src: `~/plugins/vee-validate.js` }],
 
 	// Nuxt.js modules
 	modules: [],
@@ -23,6 +23,8 @@ module.exports = {
 	// Build configuration
 	build: {
 		// You can extend webpack config here
+
+		transpile: ['vee-validate/dist/rules'],
 
 		extend(
 			config,

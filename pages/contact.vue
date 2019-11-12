@@ -1,30 +1,40 @@
 <template>
 	<div class="container">
 		<div class="contact">
-			<form ref="contact" class="form" name="contact" data-netlify="true" method="POST" autocomplete="off">
-				<h1>What adventures you are planning?</h1>
-				<h4>Call us: <i class="icon icon-whatsapp"></i> +(27) 797 724 652</h4>
-				<h2>Write us a message:</h2>
+			<ValidationObserver ref="observer">
+				<form ref="contact" class="form" name="contact" action="/submit" data-netlify="true" method="POST" autocomplete="off" @submit.prevent="submit()">
+					<h1>What adventures you are planning?</h1>
+					<!-- <h3>Call us: <i class="icon icon-whatsapp"></i> +(27) 797 724 652</h3> -->
+					<h3>Write us a message:</h3>
+					<div class="text_input">
+						<ValidationProvider v-slot="{ errors, classes }" rules="email|required">
+							<input v-model="email" class="input_anim" type="email" name="email" placeholder="e-mail" />
+							<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
+							<span class="focus-border"></span>
+						</ValidationProvider>
+					</div>
 
-				<div class="text_input">
-					<input class="input_anim" type="email" name="email" placeholder="e-mail" />
-					<span class="focus-border"></span>
-				</div>
+					<div class="text_input">
+						<ValidationProvider v-slot="{ errors, classes }" rules="required">
+							<input v-model="subject" class="input_anim" type="text" name="subject" placeholder="subject" />
+							<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
+							<span class="focus-border"></span>
+						</ValidationProvider>
+					</div>
 
-				<div class="text_input">
-					<input class="input_anim" type="text" name="subject" placeholder="subject" />
-					<span class="focus-border"></span>
-				</div>
+					<div class="text_input">
+						<ValidationProvider v-slot="{ errors, classes }" rules="required">
+							<input v-model="message" class="input_anim" type="text" name="message" placeholder="message" />
+							<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
+							<span class="focus-border"></span>
+						</ValidationProvider>
+					</div>
 
-				<div class="text_input">
-					<input class="input_anim" type="text" name="message" placeholder="message" />
-					<span class="focus-border"></span>
-				</div>
-
-				<a class="btn" type="submit" @click="submit">
-					Send
-				</a>
-			</form>
+					<button class="btn" type="submit">
+						Send
+					</button>
+				</form>
+			</ValidationObserver>
 		</div>
 
 		<!-- <div class="google_map">
@@ -39,8 +49,13 @@
 
 <script>
 import { pageEnter, pageLeave } from '~/assets/animate'
+import { ValidationProvider, ValidationObserver } from 'vee-validate'
 
 export default {
+	components: {
+		ValidationProvider,
+		ValidationObserver,
+	},
 	transition: {
 		mode: 'out-in',
 		css: false,
@@ -51,17 +66,32 @@ export default {
 			pageLeave(el, done)
 		},
 	},
+	data: () => ({
+		email: '',
+		subject: '',
+		message: '',
+	}),
 	methods: {
-		submit: function() {
-			console.log('submit')
+		async submit() {
+			const isValid = await this.$refs.observer.validate()
+			if (!isValid) {
+				console.log(isValid)
+				return
+			}
+
+			//  ship it
+			// sending to API...
 			this.$refs.contact.submit()
-			// this.$validator.validateAll().then(result => {
-			// 	if (result) {
-			// 		this.$refs.contact.submit()
-			// 	} else {
-			// 		return
-			// 	}
-			// })
+
+			// reset the values ...
+			// this.email = ''
+			// this.subject = ''
+			// this.message = ''
+
+			// You should call it on the next frame
+			requestAnimationFrame(() => {
+				this.$refs.observer.reset()
+			})
 		},
 	},
 }
@@ -99,8 +129,8 @@ export default {
 		h1 {
 			font-size: 2em;
 		}
-		h2 {
-			margin: 30px 0;
+		h3 {
+			margin-bottom: 20px;
 		}
 		// ## Input style ##
 		.text_input {
@@ -108,42 +138,54 @@ export default {
 			margin-bottom: 20px;
 			position: relative;
 			z-index: 2;
-		}
 
-		input {
-			width: 100%;
-			background: transparent;
-			margin-bottom: 10px;
-
-			color: #343a40;
-			font-family: 'Avenir-bold';
-			font-size: 1em;
-			letter-spacing: 2px;
-
-			&:focus {
-				outline: none;
-			}
-		}
-
-		.input_anim {
-			padding: 10px;
-			border: 0;
-			border-bottom: 3px solid #a9a9a9;
-
-			~ .focus-border {
-				position: absolute;
-				bottom: 10px;
-				left: 0;
-				width: 0;
-				height: 3px;
-
-				background: #fc4a1a;
-				transition: 0.5s;
-			}
-
-			&:focus ~ .focus-border {
+			input {
 				width: 100%;
-				transition: 0.3s;
+				background: transparent;
+				margin-bottom: 10px;
+
+				color: #343a40;
+				font-family: 'Avenir-bold';
+				font-size: 1em;
+				letter-spacing: 2px;
+
+				&:focus {
+					outline: none;
+				}
+			}
+
+			.input_anim {
+				padding: 10px;
+				border: 0;
+				border-bottom: 3px solid #a9a9a9;
+
+				~ .focus-border {
+					position: absolute;
+					bottom: 10px;
+					left: 0;
+					width: 0;
+					height: 3px;
+
+					background: #fc4a1a;
+					transition: 0.5s;
+				}
+
+				&:focus ~ .focus-border {
+					width: 100%;
+					transition: 0.3s;
+				}
+			}
+
+			.error {
+				position: absolute;
+				bottom: 45px;
+				left: 0;
+				margin: 0 5px;
+				font-size: 0.8em;
+				display: none;
+				&.invalid {
+					display: flex;
+				}
 			}
 		}
 
@@ -155,12 +197,13 @@ export default {
 			margin: 20px 0;
 			border-radius: 50px;
 			border: #fc4a1a 2px solid;
-			user-select: none;
-
 			background-color: rgba(255, 255, 255, 0);
-			//background-image: linear-gradient(to right, #f7b733 0%, #fc4a1a 51%, #f7b733 100%);
-
 			box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.5);
+
+			user-select: none;
+			outline: none;
+
+			font-family: 'Avenir-bold';
 			text-decoration: none;
 			text-align: center;
 			color: #fc4a1a;
