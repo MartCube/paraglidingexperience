@@ -16,11 +16,11 @@
 					</div>
 
 					<div class="text_input">
-						<ValidationProvider v-slot="{ errors, classes }" rules="required">
-							<input v-model="subject" class="input_anim" type="text" name="subject" placeholder="subject" />
-							<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
-							<span class="focus-border"></span>
-						</ValidationProvider>
+						<!-- <ValidationProvider v-slot="{ errors, classes }" rules="required"> -->
+						<input v-model="subject" class="input_anim" type="text" name="subject" placeholder="subject" />
+						<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
+						<span class="focus-border"></span>
+						<!-- </ValidationProvider> -->
 					</div>
 
 					<div class="text_input">
