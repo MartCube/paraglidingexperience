@@ -2,9 +2,8 @@
 	<div class="container">
 		<div class="contact">
 			<form ref="contact" class="form" name="contact" action="/submit" data-netlify="true" method="POST" autocomplete="off" @submit.prevent="submit()">
-			<!-- <form ref="contact" class="form" name="contact" action="/submit" @submit.prevent="submit()"> -->
+				<!-- <form ref="contact" class="form" name="contact" action="/submit" @submit.prevent="submit()"> -->
 				<ValidationObserver ref="observer">
-
 					<h1>What adventures you are planning?</h1>
 					<!-- <h3>Call us: <i class="icon icon-whatsapp"></i> +(27) 797 724 652</h3> -->
 					<h3>Write us a message:</h3>
@@ -17,11 +16,11 @@
 					</div>
 
 					<div class="text_input">
-						<ValidationProvider v-slot="{ errors, classes }" rules="required">
-							<input v-model="subject" class="input_anim" type="text" name="subject" placeholder="subject" />
-							<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
-							<span class="focus-border"></span>
-						</ValidationProvider>
+						<!-- <ValidationProvider v-slot="{ errors, classes }" rules="required"> -->
+						<input v-model="subject" class="input_anim" type="text" name="subject" placeholder="subject" />
+						<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
+						<span class="focus-border"></span>
+						<!-- </ValidationProvider> -->
 					</div>
 
 					<div class="text_input">
