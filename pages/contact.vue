@@ -24,11 +24,11 @@
 					</div>
 
 					<div class="text_input">
-						<ValidationProvider v-slot="{ errors, classes }" rules="required">
-							<input v-model="message" class="input_anim" type="text" name="message" placeholder="message" />
-							<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
-							<span class="focus-border"></span>
-						</ValidationProvider>
+						<!-- <ValidationProvider v-slot="{ errors, classes }" rules="required"> -->
+						<input v-model="message" class="input_anim" type="text" name="message" placeholder="message" />
+						<!-- <span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span> -->
+						<span class="focus-border"></span>
+						<!-- </ValidationProvider> -->
 					</div>
 
 					<button class="btn" type="submit">
