@@ -1,41 +1,36 @@
 <template>
 	<div class="container">
 		<div class="contact">
-			<form ref="contact" class="form" name="contact" action="/submit" data-netlify="true" method="POST" autocomplete="off" @submit.prevent="submit()">
-				<!-- <form ref="contact" class="form" name="contact" action="/submit" @submit.prevent="submit()"> -->
-				<ValidationObserver ref="observer">
-					<h1>What adventures you are planning?</h1>
-					<!-- <h3>Call us: <i class="icon icon-whatsapp"></i> +(27) 797 724 652</h3> -->
-					<h3>Write us a message:</h3>
-					<div class="text_input">
-						<ValidationProvider v-slot="{ errors, classes }" rules="email|required">
-							<input v-model="email" class="input_anim" type="email" name="email" placeholder="e-mail" />
-							<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
-							<span class="focus-border"></span>
-						</ValidationProvider>
-					</div>
+			<!-- <form ref="contact" class="form" name="contact" action="/success" data-netlify="true" method="POST" autocomplete="off" > -->
+			<ValidationObserver ref="contact" tag="form" class="form" name="contact" action="/success" data-netlify="true" method="POST" autocomplete="off" @submit.prevent="submit()">
+				<h1>What adventures you are planning?</h1>
+				<!-- <h3>Call us: <i class="icon icon-whatsapp"></i> +(27) 797 724 652</h3> -->
+				<h3>Write us a message:</h3>
 
-					<div class="text_input">
-						<ValidationProvider v-slot="{ errors, classes }" rules="required">
-							<input v-model="subject" class="input_anim" type="text" name="subject" placeholder="subject" />
-							<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
-							<span class="focus-border"></span>
-						</ValidationProvider>
-					</div>
+				<ValidationProvider v-slot="{ errors, classes }" rules="email|required" tag="div" class="text_input">
+					<input v-model="email" class="input_anim" type="email" name="email" placeholder="e-mail" />
+					<span class="focus-border"></span>
+					<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
+				</ValidationProvider>
 
-					<div class="text_input">
-						<!-- <ValidationProvider v-slot="{ errors, classes }" rules="required"> -->
-						<input v-model="message" class="input_anim" type="text" name="message" placeholder="message" />
-						<!-- <span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span> -->
-						<span class="focus-border"></span>
-						<!-- </ValidationProvider> -->
-					</div>
+				<ValidationProvider v-slot="{ errors, classes }" rules="required" tag="div" class="text_input">
+					<input v-model="subject" class="input_anim" type="text" name="subject" placeholder="subject" />
+					<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
+					<span class="focus-border"></span>
+				</ValidationProvider>
 
-					<button class="btn" type="submit">
-						Send
-					</button>
-				</ValidationObserver>
-			</form>
+				<ValidationProvider v-slot="{ errors, classes }" rules="required" tag="div" class="text_input">
+					<input v-model="message" class="input_anim" type="text" name="message" placeholder="message" />
+					<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
+					<span class="focus-border"></span>
+				</ValidationProvider>
+
+				<button class="btn" type="submit">
+					Send
+				</button>
+			</ValidationObserver>
+
+			<!-- </form> -->
 		</div>
 
 		<!-- <div class="google_map">
@@ -74,7 +69,7 @@ export default {
 	}),
 	methods: {
 		async submit() {
-			const isValid = await this.$refs.observer.validate()
+			const isValid = await this.$refs.contact.validate()
 			if (!isValid) {
 				console.log(isValid)
 				return
@@ -82,7 +77,9 @@ export default {
 
 			//  ship it
 			// sending to API...
-			this.$refs.contact.submit()
+
+			document.querySelector('.form').submit()
+			//this.$refs.contact.submit()
 
 			// reset the values ...
 			// this.email = ''
@@ -90,9 +87,9 @@ export default {
 			// this.message = ''
 
 			// You should call it on the next frame
-			requestAnimationFrame(() => {
-				this.$refs.observer.reset()
-			})
+			// requestAnimationFrame(() => {
+			// 	this.$refs.observer.reset()
+			// })
 		},
 	},
 }
