@@ -13,7 +13,7 @@
 			<n-link to="/about">About us</n-link>
 			<n-link to="/gallery">Gallery</n-link>
 			<n-link to="/faq">FAQ</n-link>
-			<n-link to="/contact/">Contact</n-link>
+			<n-link to="/contact">Contact</n-link>
 		</div>
 
 		<div class="button" :class="{ active: isActive }" @click="ShowHideMenu">

@@ -2,9 +2,9 @@
 	<div class="container">
 		<div class="contact">
 			<!-- <form ref="contact" class="form" name="contact" action="/success" data-netlify="true" method="POST" autocomplete="off" > -->
-			<ValidationObserver ref="contact" tag="form" class="form" name="contact" action="/success" data-netlify="true" method="POST" autocomplete="off" @submit.prevent="submit()">
+			<ValidationObserver ref="contact" v-slot="{ invalid }" tag="form" class="form" name="contact" action="/success" data-netlify="true" method="POST" autocomplete="off" @submit.prevent="submit()">
 				<h1>What adventures you are planning?</h1>
-				<!-- <h3>Call us: <i class="icon icon-whatsapp"></i> +(27) 797 724 652</h3> -->
+				<!-- <h3>call us:<i class="icon icon-whatsapp"></i> +(27) 797 724 652</h3> -->
 				<h3>Write us a message:</h3>
 
 				<ValidationProvider v-slot="{ errors, classes }" rules="email|required" tag="div" class="text_input">
@@ -25,7 +25,7 @@
 					<span class="focus-border"></span>
 				</ValidationProvider>
 
-				<button class="btn" type="submit">
+				<button :disabled="invalid" class="btn" type="submit">
 					Send
 				</button>
 			</ValidationObserver>
@@ -71,7 +71,6 @@ export default {
 		async submit() {
 			const isValid = await this.$refs.contact.validate()
 			if (!isValid) {
-				console.log(isValid)
 				return
 			}
 
@@ -115,7 +114,7 @@ export default {
 	align-content: center;
 	.icon-whatsapp {
 		color: #25d366;
-		font-size: 1.5em;
+		font-size: 1.2em;
 	}
 	.form {
 		max-width: 500px;
