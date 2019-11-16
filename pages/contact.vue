@@ -6,7 +6,7 @@
 				<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
 
 				<h1>What adventures you are planning?</h1>
-				<!-- <h3>call us:<i class="icon icon-whatsapp"></i> +(27) 797 724 652</h3> -->
+				<h3>call us:<i class="icon icon-whatsapp"></i> +(27) 797 724 652</h3>
 				<h3>Write us a message:</h3>
 
 				<ValidationProvider v-slot="{ errors, classes }" rules="email|required" tag="div" class="text_input">
@@ -33,13 +33,13 @@
 			</ValidationObserver>
 		</div>
 
-		<!-- <div class="google_map">
+		<div class="google_map">
 			<div class="mapouter">
 				<div class="gmap_canvas">
 					<iframe id="gmap_canvas" width="100%" height="400" src="https://maps.google.com/maps?q=cape%20town&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 				</div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 </template>
 

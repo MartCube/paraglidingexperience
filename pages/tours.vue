@@ -30,7 +30,7 @@
 					<div class="input-data">
 						<h3>&nbsp;</h3>
 						<div class="btn" @click="Submit">
-							Submit
+							Book
 						</div>
 					</div>
 				</no-ssr>
@@ -39,33 +39,56 @@
 		<div class="tours">
 			<div class="card">
 				<div class="image">
-					<img src="/tours/3.jpg" />
+					<img src="/tours/standard.jpg" />
 				</div>
 				<div class="about">
 					<h2>Standard tour</h2>
-					<p>Parapax in association with the one and only Andreas Malecki will do XC and competition guided tour.</p>
-					<p>This tour is for pilots who want to dramatically improve their XC and competition flying skills.</p>
+					<p>The Standard tours consist of a tour bus and paragliding guide/driver who will accompany you on the tour. This tour is for the beginner to the more experienced paragliding pilot. We will show you the best paragliding sites as well as the best South Africa has to offer in terms of culture and sightseeing. This tour moves around relative to the weather.</p>
+					<p>Non-flying family and friends are welcome on this tour.</p>
 				</div>
 				<div class="info">
 					<p>
-						<span>capacity <i class="icon icon-man"></i></span>14 people
+						<span>capacity <i class="icon icon-man"></i></span>20 people
 					</p>
 					<p>
-						<span>duration <i class="icon icon-clock"></i></span>10 days
+						<span>duration <i class="icon icon-clock"></i></span>7 & 14 days
 					</p>
 					<p>
-						<span>location <i class="icon icon-location"></i></span>Portevile
+						<span>location <i class="icon icon-location"></i></span>South Africa
 					</p>
 					<p>prize: 1200 $</p>
 				</div>
 			</div>
 			<div class="card">
 				<div class="image">
-					<img src="/tours/2.jpg" />
+					<img src="/tours/oneday.jpg" />
+				</div>
+				<div class="about">
+					<h2>One Day Tour</h2>
+					<p>Come and join us on our very popular one day tour.</p>
+					<p>These tours consist of day tours to Cape Town, Porterville and Hermanus.</p>
+					<p>An experienced guide will accompany you for the day.</p>
+				</div>
+				<div class="info">
+					<p>
+						<span>capacity <i class="icon icon-man"></i></span>20 people
+					</p>
+					<p>
+						<span>duration <i class="icon icon-clock"></i></span>1 day
+					</p>
+					<p>
+						<span>location <i class="icon icon-location"></i></span>South Africa
+					</p>
+					<p>prize: 1200 $</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="image">
+					<img src="/tours/bikefly.jpg" />
 				</div>
 				<div class="about">
 					<h2>Bike and Fly Tour</h2>
-					<p>Come and indulge your senses and experience the true freedom of journey!</p>
+					<p>Come and indulge your senses and experience the true freedom of journey! Experience heaven and earth on this tour.</p>
 					<p>A motorbike adventure combined with paragliding.</p>
 					<p>Luggage and paragliders are transported in the support vehicle and non motorcyclists can ride in the support vehicle. Motorbike licence compulsory.</p>
 				</div>
@@ -84,7 +107,7 @@
 			</div>
 			<div class="card">
 				<div class="image">
-					<img src="/tours/1.jpg" />
+					<img src="/tours/malecki.jpg" />
 				</div>
 				<div class="about">
 					<h2>Pepe Malecki Tour</h2>
@@ -287,7 +310,7 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 	flex-wrap: wrap;
 
 	.card {
-		max-width: 1150px;
+		max-width: 1100px;
 		margin: 50px 0;
 
 		display: flex;
@@ -301,7 +324,7 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 			position: relative;
 			display: flex;
 			align-self: center;
-			max-width: 350px;
+			max-width: 300px;
 			img {
 				width: 100%;
 				height: 100%;
@@ -310,7 +333,7 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 			}
 		}
 		.about {
-			width: 400px;
+			width: 500px;
 			padding: 0 25px;
 			padding-top: 25px;
 
