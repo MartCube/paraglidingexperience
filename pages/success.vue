@@ -45,6 +45,7 @@ export default {
 
 	img {
 		margin-bottom: 10px;
+		height: 60px;
 	}
 	.btn {
 		color: white;
