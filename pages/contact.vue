@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="contact">
 			<!-- <form ref="contact" class="form" name="contact" action="/success" data-netlify="true" method="POST" autocomplete="off" > -->
-			<ValidationObserver ref="contact" v-slot="{ invalid }" tag="form" class="form" name="contact" action="/success" data-netlify="true" method="POST" autocomplete="off" @submit.prevent="submit()">
+			<ValidationObserver ref="contact" tag="form" class="form" name="contact" action="/success" data-netlify="true" method="POST" autocomplete="off" @submit.prevent="submit()">
 				<h1>What adventures you are planning?</h1>
 				<!-- <h3>call us:<i class="icon icon-whatsapp"></i> +(27) 797 724 652</h3> -->
 				<h3>Write us a message:</h3>
@@ -25,7 +25,7 @@
 					<span class="focus-border"></span>
 				</ValidationProvider>
 
-				<button :disabled="invalid" class="btn" type="submit">
+				<button class="btn" type="submit">
 					Send
 				</button>
 			</ValidationObserver>
