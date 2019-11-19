@@ -7,7 +7,7 @@
 			</div>
 			<div class="calendar">
 				<h3>Check for Availability :</h3>
-				<ValidationObserver ref="tour" tag="form" class="tour_form" name="tour" action="/success" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off" @submit.prevent="submit()">
+				<ValidationObserver ref="tour" tag="form" class="tour_form" name="tours" action="/success" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off" @submit.prevent="submit()">
 					<!-- eslint-disable-next-line -->
 					<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p> 
 
@@ -16,9 +16,7 @@
 						<input v-model="email" type="text" name="email" placeholder="email" />
 						<span class="error" :class="classes"> {{ errors[0] }} <i class="icon icon-attention"></i></span>
 					</ValidationProvider>
-					<button class="btn" type="submit">
-						Book
-					</button>
+
 					<no-ssr>
 						<div class="input-data">
 							<h3>Available Tours</h3>
@@ -314,7 +312,6 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 				align-self: center;
 				width: 120px;
 				padding: 10px;
-				margin: 20px 0;
 				border-radius: 10px;
 				border: none;
 				background-color: white;
