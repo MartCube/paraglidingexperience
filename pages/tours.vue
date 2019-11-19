@@ -6,34 +6,42 @@
 				<h1>next adventure</h1>
 			</div>
 			<div class="calendar">
-				<no-ssr>
-					<div class="input-data">
-						<h3>Email</h3>
-						<input type="text" name="email" placeholder="email" />
-					</div>
+				<h3>Check for Availability :</h3>
+				<ValidationObserver ref="tour" tag="form" class="tour_form" name="tour" action="/success" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off" @submit.prevent="submit()">
+					<!-- eslint-disable-next-line -->
+					<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p> 
 
-					<div class="input-data">
-						<h3>Available Tours</h3>
-						<v-select v-model="selectedTour" :options="tours"></v-select>
-					</div>
+	
 
-					<div class="input-data">
-						<h3>Arrival <i class="icon-calendar"></i></h3>
-						<v-date-picker v-model="ArrivalDate" :min-date="new Date()"></v-date-picker>
-					</div>
-
-					<div class="input-data">
-						<h3>Departure <i class="icon-calendar"></i></h3>
-						<v-date-picker v-model="DepartureDate" :min-date="ArrivalDate"></v-date-picker>
-					</div>
-
-					<div class="input-data">
-						<h3>&nbsp;</h3>
-						<div class="btn" @click="Submit">
-							Book
+					<no-ssr>
+						<ValidationProvider v-slot="{ errors, classes }" rules="email|required" tag="div" class="input-data">
+							<h3>Email</h3>
+							<input v-model="email" type="text" name="email" placeholder="email" />
+							<span class="error" :class="classes"> {{ errors[0] }} <i class="icon icon-attention"></i></span>
+						</ValidationProvider>
+						<div class="input-data">
+							<h3>Available Tours</h3>
+							<v-select v-model="selectedTour" :options="tours"></v-select>
 						</div>
-					</div>
-				</no-ssr>
+
+						<div class="input-data">
+							<h3>Arrival <i class="icon-calendar"></i></h3>
+							<v-date-picker v-model="ArrivalDate" :min-date="new Date()"></v-date-picker>
+						</div>
+
+						<div class="input-data">
+							<h3>Departure <i class="icon-calendar"></i></h3>
+							<v-date-picker v-model="DepartureDate" :min-date="ArrivalDate"></v-date-picker>
+						</div>
+
+						<div class="input-data">
+							<h3>&nbsp;</h3>
+							<button class="btn" type="submit">
+								Book
+							</button>
+						</div>
+					</no-ssr>
+				</ValidationObserver>
 			</div>
 		</div>
 		<div class="tours">
@@ -42,7 +50,7 @@
 					<img src="/tours/standard.jpg" />
 				</div>
 				<div class="about">
-					<h2>Standard tour</h2>
+					<h2>Standard Tour</h2>
 					<p>The Standard tours consist of a tour bus and paragliding guide/driver who will accompany you on the tour. This tour is for the beginner to the more experienced paragliding pilot. We will show you the best paragliding sites as well as the best South Africa has to offer in terms of culture and sightseeing. This tour moves around relative to the weather.</p>
 					<p>Non-flying family and friends are welcome on this tour.</p>
 				</div>
@@ -54,7 +62,7 @@
 						<span>duration <i class="icon icon-clock"></i></span>7 & 14 days
 					</p>
 					<p>
-						<span>location <i class="icon icon-location"></i></span>South Africa
+						<span>location <i class="icon icon-location"></i></span>Hermanus
 					</p>
 					<p>prize: 1200 $</p>
 				</div>
@@ -65,9 +73,7 @@
 				</div>
 				<div class="about">
 					<h2>One Day Tour</h2>
-					<p>Come and join us on our very popular one day tour.</p>
-					<p>These tours consist of day tours to Cape Town, Porterville and Hermanus.</p>
-					<p>An experienced guide will accompany you for the day.</p>
+					<p>Come and join us on our very popular one day tour. These tours consist of day tours to Cape Town, Porterville and Hermanus. An experienced guide will accompany you for the day.</p>
 				</div>
 				<div class="info">
 					<p>
@@ -88,9 +94,7 @@
 				</div>
 				<div class="about">
 					<h2>Bike and Fly Tour</h2>
-					<p>Come and indulge your senses and experience the true freedom of journey! Experience heaven and earth on this tour.</p>
-					<p>A motorbike adventure combined with paragliding.</p>
-					<p>Luggage and paragliders are transported in the support vehicle and non motorcyclists can ride in the support vehicle. Motorbike licence compulsory.</p>
+					<p>Come and indulge your senses and experience the true freedom of journey! Experience heaven and earth on this tour. A motorbike adventure combined with paragliding. Luggage and paragliders are transported in the support vehicle and non motorcyclists can ride in the support vehicle. Motorbike licence compulsory.</p>
 				</div>
 				<div class="info">
 					<p>
@@ -111,9 +115,7 @@
 				</div>
 				<div class="about">
 					<h2>Pepe Malecki Tour</h2>
-					<p>Parapax in association with the one and only Andreas Malecki.</p>
-					<p>You will fly together with highly experienced pilots who will coach you and analyze your skills.</p>
-					<p>This tour is for those who want to dramatically improve their XC and competition flying skills.</p>
+					<p>Parapax in association with the one and only Andreas Malecki. You will fly together with highly experienced pilots who will coach you and analyze your skills. This tour is for those who want to dramatically improve their XC and competition flying skills.</p>
 				</div>
 				<div class="info">
 					<p>
@@ -140,22 +142,23 @@
 				<img src="/tours/intro.jpg" alt="" />
 			</div>
 		</div>
-
-		<h1>Our tours are really all inclusive!</h1>
-		<div class="table">
-			<div class="row">
-				<p><i class="icon icon-bed"></i> Accommodation 3-4 Star</p>
-				<p><i class="icon icon-food"></i>3x meals a day</p>
-				<p><i class="icon icon-flight"></i>Airport pick up and drop off</p>
-				<p><i class="icon icon-credit-card"></i>Secure Payment</p>
-				<p><i class="icon icon-doc"></i>Registration with local association SAPHA</p>
-			</div>
-			<div class="row">
-				<p><i class="icon icon-doc"></i>All Site fees</p>
-				<p><i class="icon icon-drink"></i>Recovery and drinks</p>
-				<p><i class="icon icon-guide"></i>Guiding by experienced paragliding pilot</p>
-				<p><i class="icon icon-cloud"></i>Updated weather forecasts</p>
-				<p><i class="icon icon-motorcycle"></i>Free alternative activities</p>
+		<div class="inclusive">
+			<h1>Our tours are really all inclusive!</h1>
+			<div class="table">
+				<div class="row">
+					<p><i class="icon icon-bed"></i> Accommodation 3-4 Star</p>
+					<p><i class="icon icon-food"></i>3x meals a day</p>
+					<p><i class="icon icon-flight"></i>Airport pick up and drop off</p>
+					<p><i class="icon icon-credit-card"></i>Secure Payment</p>
+					<p><i class="icon icon-doc"></i>Registration with local association SAPHA</p>
+				</div>
+				<div class="row">
+					<p><i class="icon icon-doc"></i>All Site fees</p>
+					<p><i class="icon icon-drink"></i>Recovery and drinks</p>
+					<p><i class="icon icon-guide"></i>Guiding by experienced paragliding pilot</p>
+					<p><i class="icon icon-cloud"></i>Updated weather forecasts</p>
+					<p><i class="icon icon-motorcycle"></i>Free alternative activities</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -163,8 +166,13 @@
 
 <script>
 import { pageEnter, pageLeave } from '~/assets/animate'
+import { ValidationProvider, ValidationObserver } from 'vee-validate'
 
 export default {
+	components: {
+		ValidationProvider,
+		ValidationObserver,
+	},
 	transition: {
 		mode: 'out-in',
 		css: false,
@@ -177,15 +185,22 @@ export default {
 	},
 	data() {
 		return {
-			selectedTour: '',
-			tours: ['Standard Tour', 'Pepe Malecki Tour', 'Bike and Fly Tour'],
+			email: '',
+			selectedTour: 'Standard Tour',
+			tours: ['Standard Tour', 'One Day Tour', 'Pepe Malecki Tour', 'Bike and Fly Tour'],
 			ArrivalDate: new Date(),
 			DepartureDate: new Date(),
 		}
 	},
 	methods: {
-		Submit() {
-			console.log(this.ArrivalDate)
+		async submit() {
+			const isValid = await this.$refs.tour.validate()
+			console.log(isValid)
+			if (!isValid) {
+				return
+			}
+			// sending to API
+			document.querySelector('.tour_form').submit()
 		},
 	},
 }
@@ -230,70 +245,98 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 
 	.calendar {
 		width: 100%;
-		padding: 30px 0;
+		padding: 30px;
 		background-color: rgba(252, 74, 26, 0.8);
+		color: white;
 
 		display: flex;
-		justify-content: space-around;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-start;
 		align-content: center;
 
-		span {
-			width: 120px;
-		}
-
-		input[type='text'] {
-			width: 200px;
-			padding: 8px;
-			border: 1px solid #ccc;
-			border-radius: 5px;
-			&:focus {
-				outline: none;
-				box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.2);
-				border: 1px solid #fc4a1a;
-			}
-		}
-		.input-data {
+		.tour_form {
+			width: 100%;
 			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: flex-start;
+			justify-content: space-between;
+			align-items: center;
 			align-content: center;
 
-			h3 {
-				color: white;
-				margin: 10px 0;
+			span {
+				width: 120px;
 			}
-		}
 
-		.v-select {
-			width: 200px;
-			background: white;
-			border-radius: 5px;
-		}
-
-		.btn {
-			width: 120px;
-			padding: 7px;
-
-			border-radius: 5px;
-			// border: #fc4a1a 2px solid;
-			background-color: white;
-			box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.2);
-
-			text-decoration: none;
-			text-align: center;
-			color: #fc4a1a;
-			font-size: 1.2em;
-			cursor: pointer;
-			user-select: none;
-
-			transition: all 0.3s ease;
-			&:hover {
-				box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+			input[type='text'] {
+				width: 200px;
+				padding: 8px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				font-weight: 700;
+				font-size: 1em;
+				&:focus {
+					outline: none;
+					box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.2);
+					border: 1px solid #fc4a1a;
+				}
 			}
-			&:active {
-				box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+			.input-data {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				align-content: center;
+				position: relative;
+				h3 {
+					color: white;
+					margin: 10px 0;
+				}
+
+				.error {
+					position: absolute;
+					bottom: 45px;
+					right: 0;
+
+					color: #343a40;
+					font-size: 0.8em;
+					display: none;
+					&.invalid {
+						display: flex;
+					}
+				}
+			}
+
+			.v-select {
+				width: 200px;
+				background: white;
+				border-radius: 5px;
+			}
+
+			.btn {
+				align-self: center;
+				width: 120px;
+				padding: 10px;
+				margin: 20px 0;
+				border-radius: 10px;
+				border: none;
+				background-color: white;
+				box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.5);
+
+				user-select: none;
+				outline: none;
+
+				font-family: 'Avenir-bold';
+				text-decoration: none;
+				text-align: center;
+				color: #fc4a1a;
+				font-size: 1.2em;
+				cursor: pointer;
+
+				transition: all 0.3s ease;
+				&:hover {
+					box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+				}
+				&:active {
+					box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+				}
 			}
 		}
 	}
@@ -319,7 +362,9 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 		align-content: center;
 
 		border: 1px solid #ccc;
-
+		p {
+			font-size: 1em;
+		}
 		.image {
 			position: relative;
 			display: flex;
@@ -357,10 +402,11 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 			align-items: flex-start;
 			align-content: center;
 			p {
-				text-align: right;
 				width: 80%;
 				padding: 10px 0;
 				border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+				text-align: right;
+				float: right;
 				span {
 					float: left;
 				}
@@ -371,7 +417,7 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 
 .intro {
 	width: 80%;
-	margin: 100px 0;
+	margin: 50px 0;
 
 	display: flex;
 	justify-content: center;
@@ -397,21 +443,31 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 	}
 }
 
-.table {
-	display: flex;
+.inclusive {
+	width: 80%;
 	margin: 50px 0;
 
-	.row {
-		max-width: 350px;
-		margin: 0 50px;
-		text-align: right;
-		i {
-			float: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+	.table {
+		display: flex;
+		.row {
+			max-width: 400px;
+
+			margin: 0 50px;
+			text-align: right;
+			i {
+				float: left;
+			}
 		}
-	}
-	p {
-		padding: 20px 0;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		p {
+			padding: 20px 0;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		}
 	}
 }
 
@@ -423,6 +479,7 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 		text-align: center;
 	}
 	.booking {
+		height: 100vh;
 		margin-top: 60px;
 		justify-content: center;
 		align-items: center;
@@ -435,12 +492,18 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 			justify-content: center;
 			align-items: center;
 			padding: 10px;
-			.input-data {
-				margin-bottom: 20px;
+
+			.tour_form {
 				flex-direction: column;
-				justify-content: flex-start;
+				justify-content: center;
 				align-items: center;
-				align-content: center;
+				.input-data {
+					margin-bottom: 20px;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: center;
+					align-content: center;
+				}
 			}
 		}
 	}
@@ -460,6 +523,12 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 			.info {
 				width: 350px;
 			}
+
+			.about {
+				h2 {
+					align-self: center;
+				}
+			}
 			.info {
 				justify-content: center;
 				align-items: center;
@@ -469,14 +538,22 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 	}
 	.intro {
 		flex-direction: column-reverse;
-
+		h1 {
+			text-align: center;
+		}
 		.text {
 			max-width: 100%;
 			padding: 0;
 		}
 	}
-	.table {
-		flex-direction: column;
+	.inclusive {
+		text-align: center;
+		.table {
+			flex-direction: column;
+			.row {
+				margin: 0;
+			}
+		}
 	}
 }
 </style>

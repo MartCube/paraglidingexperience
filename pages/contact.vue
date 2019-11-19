@@ -6,24 +6,24 @@
 				<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
 
 				<h1>What adventures you are planning?</h1>
-				<h3>call us:<i class="icon icon-whatsapp"></i> +(27) 797 724 652</h3>
+				<h3>call us:<i class="icon icon-whatsapp"></i> +(27) 762 865 106</h3>
 				<h3>Write us a message:</h3>
 
 				<ValidationProvider v-slot="{ errors, classes }" rules="email|required" tag="div" class="text_input">
 					<input v-model="email" class="input_anim" type="email" name="email" placeholder="e-mail" />
 					<span class="focus-border"></span>
-					<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
+					<span class="error" :class="classes"> {{ errors[0] }} <i class="icon icon-attention"></i></span>
 				</ValidationProvider>
 
 				<ValidationProvider v-slot="{ errors, classes }" rules="required" tag="div" class="text_input">
 					<input v-model="subject" class="input_anim" type="text" name="subject" placeholder="subject" />
-					<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
+					<span class="error" :class="classes"> {{ errors[0] }} <i class="icon icon-attention"></i></span>
 					<span class="focus-border"></span>
 				</ValidationProvider>
 
 				<ValidationProvider v-slot="{ errors, classes }" rules="required" tag="div" class="text_input">
 					<input v-model="message" class="input_anim" type="text" name="message" placeholder="message" />
-					<span class="error" :class="classes"><i class="icon icon-attention"></i> {{ errors[0] }}</span>
+					<span class="error" :class="classes"> {{ errors[0] }} <i class="icon icon-attention"></i></span>
 					<span class="focus-border"></span>
 				</ValidationProvider>
 
@@ -97,9 +97,6 @@ export default {
 <style lang="scss" scoped>
 .container {
 	margin: 0;
-}
-.hidden {
-	display: none;
 }
 
 .contact {
@@ -176,7 +173,7 @@ export default {
 			.error {
 				position: absolute;
 				bottom: 45px;
-				left: 0;
+				right: 0;
 				margin: 0 5px;
 				font-size: 0.8em;
 				display: none;
