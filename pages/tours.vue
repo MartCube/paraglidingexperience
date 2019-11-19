@@ -16,8 +16,10 @@
 						<input v-model="email" type="text" name="email" placeholder="email" />
 						<span class="error" :class="classes"> {{ errors[0] }} <i class="icon icon-attention"></i></span>
 					</ValidationProvider>
-
-					<no-ssr>
+					<button class="btn" type="submit">
+						Book
+					</button>
+					<!-- <no-ssr>
 						<div class="input-data">
 							<h3>Available Tours</h3>
 							<v-select v-model="selectedTour" :options="tours"></v-select>
@@ -32,13 +34,13 @@
 							<h3>Departure <i class="icon-calendar"></i></h3>
 							<v-date-picker v-model="DepartureDate" :min-date="ArrivalDate"></v-date-picker>
 						</div>
-					</no-ssr>
-					<div class="input-data">
+					</no-ssr> -->
+					<!-- <div class="input-data">
 						<h3>&nbsp;</h3>
 						<button class="btn" type="submit">
 							Book
 						</button>
-					</div>
+					</div> -->
 				</ValidationObserver>
 			</div>
 		</div>
