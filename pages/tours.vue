@@ -11,14 +11,12 @@
 					<!-- eslint-disable-next-line -->
 					<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p> 
 
-	
-
+					<ValidationProvider v-slot="{ errors, classes }" rules="email|required" tag="div" class="input-data">
+						<h3>Email</h3>
+						<input v-model="email" type="text" name="email" placeholder="email" />
+						<span class="error" :class="classes"> {{ errors[0] }} <i class="icon icon-attention"></i></span>
+					</ValidationProvider>
 					<no-ssr>
-						<ValidationProvider v-slot="{ errors, classes }" rules="email|required" tag="div" class="input-data">
-							<h3>Email</h3>
-							<input v-model="email" type="text" name="email" placeholder="email" />
-							<span class="error" :class="classes"> {{ errors[0] }} <i class="icon icon-attention"></i></span>
-						</ValidationProvider>
 						<div class="input-data">
 							<h3>Available Tours</h3>
 							<v-select v-model="selectedTour" :options="tours"></v-select>
@@ -33,14 +31,13 @@
 							<h3>Departure <i class="icon-calendar"></i></h3>
 							<v-date-picker v-model="DepartureDate" :min-date="ArrivalDate"></v-date-picker>
 						</div>
-
-						<div class="input-data">
-							<h3>&nbsp;</h3>
-							<button class="btn" type="submit">
-								Book
-							</button>
-						</div>
 					</no-ssr>
+					<div class="input-data">
+						<h3>&nbsp;</h3>
+						<button class="btn" type="submit">
+							Book
+						</button>
+					</div>
 				</ValidationObserver>
 			</div>
 		</div>

@@ -79,16 +79,6 @@ export default {
 
 			document.querySelector('.form').submit()
 			//this.$refs.contact.submit()
-
-			// reset the values ...
-			// this.email = ''
-			// this.subject = ''
-			// this.message = ''
-
-			// You should call it on the next frame
-			// requestAnimationFrame(() => {
-			// 	this.$refs.observer.reset()
-			// })
 		},
 	},
 }
