@@ -26,11 +26,11 @@
 				<a class="tripadvisor" href="#" title="Trip Advisor">
 					<i class="icon icon-tripadvisor" />
 				</a>
-				<a class="twitter" href="#" title="Twitter">
-					<i class="icon icon-twitter" />
-				</a>
 				<a class="youtube" href="#" title="YouTube">
 					<i class="icon icon-youtube" />
+				</a>
+				<a class="whatsapp" href="https://wa.me/27762865106" title="WhatsApp">
+					<i class="icon icon-whatsapp" />
 				</a>
 			</div>
 		</div>
@@ -49,11 +49,6 @@
 		</div>
 		<div class="arrow" @click="ScrollToTop">
 			<i class="icon icon-up-big" />
-		</div>
-		<div class="whatsapp">
-			<a href="https://wa.me/27762865106">
-				<i class="icon icon-whatsapp" />
-			</a>
 		</div>
 	</div>
 </template>
@@ -75,8 +70,8 @@ $colors: (
 	facebook: #3b5998,
 	instagram: #dd2a7b,
 	tripadvisor: #00a680,
-	twitter: #38a1f3,
 	youtube: #c4302b,
+	whatsapp: #25d366,
 );
 
 .footer {
@@ -162,6 +157,9 @@ $colors: (
 					&.icon-tripadvisor {
 						font-size: 20px;
 						padding-right: 5px;
+					}
+					&.icon-whatsapp {
+						font-size: 28px;
 					}
 				}
 
@@ -252,30 +250,6 @@ $colors: (
 			box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
 		}
 	}
-	.whatsapp {
-		position: absolute;
-		bottom: 20px;
-		right: 20px;
-		width: 35px;
-		height: 35px;
-		background: #25d366;
-
-		line-height: 35px;
-		border-radius: 50%;
-		text-align: center;
-		cursor: pointer;
-		i {
-			text-decoration: none;
-			font-size: 20px;
-			color: white;
-		}
-
-		transition: $transition;
-		&:hover {
-			transform: scale(1.1);
-			box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
-		}
-	}
 }
 @media (max-width: 750px) {
 	.footer {
@@ -294,6 +268,9 @@ $colors: (
 		}
 		.copyrights {
 			text-align: center;
+		}
+		.arrow {
+			bottom: 20px;
 		}
 	}
 }
