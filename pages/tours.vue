@@ -8,7 +8,7 @@
 			<div class="calendar">
 				<h3>Check for Availability :</h3>
 
-				<ValidationObserver ref="tour" tag="form" class="tour_form" name="second-form" action="/success" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off">
+				<form ref="tour" tag="form" class="tour_form" name="second-form" action="/success" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off">
 					<!-- eslint-disable-next-line -->
 				<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
 
@@ -43,7 +43,7 @@
 							Book
 						</button>
 					</div> -->
-				</ValidationObserver>
+				</form>
 			</div>
 		</div>
 		<div class="tours">
