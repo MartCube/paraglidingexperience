@@ -8,41 +8,11 @@
 			<div class="calendar">
 				<h3>Check for Availability :</h3>
 
-				<form ref="tour" tag="form" class="tour_form" name="second-form" action="/success" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off">
-					<!-- eslint-disable-next-line -->
-				<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
-
-					<ValidationProvider v-slot="{ errors, classes }" rules="email|required" tag="div" class="input-data">
-						<h3>Email</h3>
-						<input v-model="email" type="text" name="email2" placeholder="email" />
-						<span class="error" :class="classes"> {{ errors[0] }} <i class="icon icon-attention"></i></span>
-					</ValidationProvider>
-
-					<button class="btn" type="submit">
-						Send
+				<form name="test" data-netlify="true" method="POST">
+					<input type="text" name="email" />
+					<button type="submit">
+						book
 					</button>
-					<!-- <no-ssr>
-						<div class="input-data">
-							<h3>Available Tours</h3>
-							<v-select v-model="selectedTour" :options="tours"></v-select>
-						</div>
-
-						<div class="input-data">
-							<h3>Arrival <i class="icon-calendar"></i></h3>
-							<v-date-picker v-model="ArrivalDate" :min-date="new Date()"></v-date-picker>
-						</div>
-
-						<div class="input-data">
-							<h3>Departure <i class="icon-calendar"></i></h3>
-							<v-date-picker v-model="DepartureDate" :min-date="ArrivalDate"></v-date-picker>
-						</div>
-					</no-ssr>
-					<div class="input-data">
-						<h3>&nbsp;</h3>
-						<button class="btn" type="submit">
-							Book
-						</button>
-					</div> -->
 				</form>
 			</div>
 		</div>
@@ -190,7 +160,7 @@ export default {
 			email: '',
 			selectedTour: 'Standard Tour',
 			tours: ['Standard Tour', 'One Day Tour', 'Pepe Malecki Tour', 'Bike and Fly Tour'],
-			ArrivalDate: new Date(),
+			ArrivalDate: new Date().toISOString().split('T')[0],
 			DepartureDate: new Date(),
 		}
 	},
