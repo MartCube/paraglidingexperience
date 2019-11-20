@@ -36,7 +36,9 @@
 					</no-ssr>
 					<div class="input-data">
 						<h3>&nbsp;</h3>
-						<input class="btn" type="submit" value="book" />
+						<button class="btn" type="submit">
+							Book
+						</button>
 					</div>
 				</ValidationObserver>
 			</div>
