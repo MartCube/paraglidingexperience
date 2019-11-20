@@ -11,6 +11,8 @@
 				<ValidationObserver ref="tour" tag="form" class="tour_form" name="tour" action="/success" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off" @submit.prevent="submit()">
 					<!-- eslint-disable-next-line -->
 					<p class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field"/></label></p>
+
+
 					<ValidationProvider v-slot="{ errors, classes }" rules="email|required" tag="div" class="input-data">
 						<h3>Email</h3>
 						<input v-model="email" type="text" name="email" placeholder="email" />
@@ -33,7 +35,7 @@
 							<v-date-picker v-model="DepartureDate" :min-date="ArrivalDate"></v-date-picker>
 						</div>
 					</client-only>
-					>
+
 					<div class="input-data">
 						<h3>&nbsp;</h3>
 						<button class="btn" type="submit">
