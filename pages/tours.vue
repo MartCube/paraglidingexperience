@@ -10,7 +10,8 @@
 
 				<ValidationObserver ref="tour" tag="form" class="tour_form" name="tour" action="/success" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off" @submit.prevent="submit()">
 					<!-- eslint-disable-next-line -->
-					<p class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field"/></label></p>
+					<input type="hidden" name="form-name" value="tour">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+
 
 
 					<ValidationProvider v-slot="{ errors, classes }" rules="email|required" tag="div" class="input-data">
