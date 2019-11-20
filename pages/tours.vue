@@ -12,14 +12,15 @@
 					<!-- eslint-disable-next-line -->
 					<input type="hidden" name="form-name" value="tour">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
 
-
-
 					<ValidationProvider v-slot="{ errors, classes }" rules="email|required" tag="div" class="input-data">
 						<h3>Email</h3>
 						<input v-model="email" type="text" name="email" placeholder="email" />
 						<span class="error" :class="classes"> {{ errors[0] }} <i class="icon icon-attention"></i></span>
 					</ValidationProvider>
+
 					<input v-model="selectedTour" class="hidden" type="text" name="selectedTour" />
+					<input v-model="ArrivalDate" class="hidden" type="text" name="ArrivalDate" />
+					<input v-model="DepartureDate" class="hidden" type="text" name="DepartureDate" />
 
 					<client-only>
 						<div class="input-data">
@@ -202,6 +203,7 @@ export default {
 			if (!isValid) {
 				return
 			}
+			DepartureDate.toISOString().split('T')[0]
 			// sending to API
 			document.querySelector('.tour_form').submit()
 		},
