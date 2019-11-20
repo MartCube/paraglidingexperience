@@ -50,6 +50,11 @@
 		<div class="arrow" @click="ScrollToTop">
 			<i class="icon icon-up-big" />
 		</div>
+		<div class="whatsapp">
+			<a href="https://wa.me/27762865106?text=How%20can%20we%20help%20you?">
+				<i class="icon icon-whatsapp" />
+			</a>
+		</div>
 	</div>
 </template>
 
@@ -239,6 +244,30 @@ $colors: (
 			text-decoration: none;
 			font-size: 20px;
 			color: #343a40;
+		}
+
+		transition: $transition;
+		&:hover {
+			transform: scale(1.1);
+			box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+		}
+	}
+	.whatsapp {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		width: 35px;
+		height: 35px;
+		background: #25d366;
+
+		line-height: 35px;
+		border-radius: 50%;
+		text-align: center;
+		cursor: pointer;
+		i {
+			text-decoration: none;
+			font-size: 20px;
+			color: white;
 		}
 
 		transition: $transition;

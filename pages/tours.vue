@@ -500,11 +500,12 @@ $transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
+
 				.input-data {
 					margin-bottom: 20px;
 					flex-direction: column;
 					justify-content: flex-start;
-					align-items: center;
+					align-items: flex-start;
 					align-content: center;
 				}
 			}

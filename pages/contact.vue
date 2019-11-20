@@ -6,7 +6,7 @@
 				<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
 
 				<h1>What adventures you are planning?</h1>
-				<h3>call us:<i class="icon icon-whatsapp"></i> +(27) 762 865 106</h3>
+
 				<h3>Write us a message:</h3>
 
 				<ValidationProvider v-slot="{ errors, classes }" rules="email|required" tag="div" class="text_input">
@@ -99,10 +99,7 @@ export default {
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-	.icon-whatsapp {
-		color: #25d366;
-		font-size: 1.2em;
-	}
+
 	.form {
 		max-width: 500px;
 		display: flex;
@@ -222,5 +219,10 @@ export default {
 }
 
 @media (max-width: 750px) {
+	.contact {
+		h1 {
+			text-align: center;
+		}
+	}
 }
 </style>
