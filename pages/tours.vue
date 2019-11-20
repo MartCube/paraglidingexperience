@@ -192,18 +192,17 @@ export default {
 			email: '',
 			selectedTour: 'Standard Tour',
 			tours: ['Standard Tour', 'One Day Tour', 'Pepe Malecki Tour', 'Bike and Fly Tour'],
-			ArrivalDate: new Date().toISOString().split('T')[0],
+			ArrivalDate: new Date(),
 			DepartureDate: new Date(),
 		}
 	},
 	methods: {
 		async submit() {
 			const isValid = await this.$refs.tour.validate()
-			console.log(isValid)
 			if (!isValid) {
 				return
 			}
-			this.DepartureDate.toISOString().split('T')[0]
+
 			// sending to API
 			document.querySelector('.tour_form').submit()
 		},
