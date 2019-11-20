@@ -7,13 +7,14 @@
 			</div>
 			<div class="calendar">
 				<h3>Check for Availability :</h3>
-				<ValidationObserver ref="tour" tag="form" class="tour_form" name="tours" action="/success" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off" @submit.prevent="submit()">
+
+				<ValidationObserver ref="tour" tag="form" class="tour_form" name="tour" action="/success" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off" @submit.prevent="submit()">
 					<!-- eslint-disable-next-line -->
 					<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p> 
 
 					<ValidationProvider v-slot="{ errors, classes }" rules="email|required" tag="div" class="input-data">
 						<h3>Email</h3>
-						<input v-model="email" type="text" name="email" placeholder="email" />
+						<input v-model="email" type="text" name="email2" placeholder="email" />
 						<span class="error" :class="classes"> {{ errors[0] }} <i class="icon icon-attention"></i></span>
 					</ValidationProvider>
 					<no-ssr>
