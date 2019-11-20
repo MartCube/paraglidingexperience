@@ -19,6 +19,7 @@
 						<input v-model="email" type="text" name="email" placeholder="email" />
 						<span class="error" :class="classes"> {{ errors[0] }} <i class="icon icon-attention"></i></span>
 					</ValidationProvider>
+					<input v-model="selectedTour" class="hidden" type="text" name="selectedTour" />
 
 					<client-only>
 						<div class="input-data">
