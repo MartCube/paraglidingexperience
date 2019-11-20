@@ -203,7 +203,7 @@ export default {
 			if (!isValid) {
 				return
 			}
-			DepartureDate.toISOString().split('T')[0]
+			this.DepartureDate.toISOString().split('T')[0]
 			// sending to API
 			document.querySelector('.tour_form').submit()
 		},
