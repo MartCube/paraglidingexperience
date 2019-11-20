@@ -3,7 +3,7 @@
 		<div class="contact">
 			<ValidationObserver ref="contact" tag="form" class="form" name="contact" action="/success" data-netlify="true" netlify-honeypot="bot-field" method="POST" autocomplete="off" @submit.prevent="submit()">
 				<!-- eslint-disable-next-line -->
-				<input type="hidden" name="bot-field" value="contact">	
+				<input type="hidden" name="form-name" value="contact">	<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
 
 				<h1>What adventures you are planning?</h1>
 				<h3>call us:<i class="icon icon-whatsapp"></i> +(27) 762 865 106</h3>
