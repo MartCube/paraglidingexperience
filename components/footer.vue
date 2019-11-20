@@ -51,7 +51,7 @@
 			<i class="icon icon-up-big" />
 		</div>
 		<div class="whatsapp">
-			<a href="https://wa.me/27762865106?text=How%20can%20we%20help%20you?">
+			<a href="https://wa.me/27762865106">
 				<i class="icon icon-whatsapp" />
 			</a>
 		</div>
@@ -294,11 +294,6 @@ $colors: (
 		}
 		.copyrights {
 			text-align: center;
-		}
-		.arrow {
-			top: auto;
-			bottom: 20px;
-			right: 20px;
 		}
 	}
 }
