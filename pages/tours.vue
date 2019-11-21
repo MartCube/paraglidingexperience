@@ -51,6 +51,27 @@
 		<div class="tours">
 			<div class="card">
 				<div class="image">
+					<img src="/tours/malecki.jpg" />
+				</div>
+				<div class="about">
+					<h2>Pepe Malecki Tour</h2>
+					<p>Parapax in association with the one and only Andreas Malecki. You will fly together with highly experienced pilots who will coach you and analyze your skills. This tour is for those who want to dramatically improve their XC and competition flying skills.</p>
+				</div>
+				<div class="info">
+					<p>
+						<span>capacity <i class="icon icon-man"></i></span>14 people
+					</p>
+					<p>
+						<span>duration <i class="icon icon-clock"></i></span>7 days
+					</p>
+					<p>
+						<span>location <i class="icon icon-location"></i></span>Portevile
+					</p>
+					<p>prize: 1200 $</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="image">
 					<img src="/tours/standard.jpg" />
 				</div>
 				<div class="about">
@@ -109,27 +130,6 @@
 					</p>
 					<p>
 						<span>location <i class="icon icon-location"></i></span>South Africa
-					</p>
-					<p>prize: 1200 $</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="image">
-					<img src="/tours/malecki.jpg" />
-				</div>
-				<div class="about">
-					<h2>Pepe Malecki Tour</h2>
-					<p>Parapax in association with the one and only Andreas Malecki. You will fly together with highly experienced pilots who will coach you and analyze your skills. This tour is for those who want to dramatically improve their XC and competition flying skills.</p>
-				</div>
-				<div class="info">
-					<p>
-						<span>capacity <i class="icon icon-man"></i></span>14 people
-					</p>
-					<p>
-						<span>duration <i class="icon icon-clock"></i></span>7 days
-					</p>
-					<p>
-						<span>location <i class="icon icon-location"></i></span>Portevile
 					</p>
 					<p>prize: 1200 $</p>
 				</div>

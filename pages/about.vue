@@ -11,64 +11,48 @@
 		<div class="team">
 			<h1>The Team</h1>
 			<div class="grid">
-				<div class="image">
-					<img src="/about/1.jpg" alt="" />
-					<div class="color-overlay"></div>
-					<div class="text1">
-						<h2>Susan de Villiers</h2>
+				<div class="row">
+					<div class="image">
+						<img src="/about/1.jpg" alt="" />
+						<div class="color-overlay"></div>
+						<div class="text1">
+							<h2>Susan de Villiers</h2>
+						</div>
+						<div class="text2">
+							<p>General Manager</p>
+						</div>
 					</div>
-					<div class="text2">
-						<p>Tandem Pilot</p>
-					</div>
-				</div>
-				<div class="image">
-					<img src="/about/2.jpg" alt="" />
-					<div class="color-overlay"></div>
-					<div class="text1">
-						<h2>Marc Aldridge</h2>
-					</div>
-					<div class="text2">
-						<p>Tandem Pilot</p>
-					</div>
-				</div>
-				<div class="image">
-					<img src="/about/3.jpg" alt="" />
-					<div class="color-overlay"></div>
-					<div class="text1">
-						<h2>Theunis de Bruin</h2>
-					</div>
-					<div class="text2">
-						<p>Tandem Pilot</p>
+					<div class="image">
+						<img src="/about/4.jpg" alt="" />
+						<div class="color-overlay"></div>
+						<div class="text1">
+							<h2>Stef Juncker</h2>
+						</div>
+						<div class="text2">
+							<p>Owner / Tour Guide</p>
+						</div>
 					</div>
 				</div>
-				<div class="image">
-					<img src="/about/4.jpg" alt="" />
-					<div class="color-overlay"></div>
-					<div class="text1">
-						<h2>Stef Juncker</h2>
+				<div class="row">
+					<div class="image">
+						<img src="/about/5.jpg" alt="" />
+						<div class="color-overlay"></div>
+						<div class="text1">
+							<h2>Witness Mutiforo</h2>
+						</div>
+						<div class="text2">
+							<p>Manager</p>
+						</div>
 					</div>
-					<div class="text2">
-						<p>Owner / Tandem Pilot</p>
-					</div>
-				</div>
-				<div class="image">
-					<img src="/about/5.jpg" alt="" />
-					<div class="color-overlay"></div>
-					<div class="text1">
-						<h2>Witness Mutiforo</h2>
-					</div>
-					<div class="text2">
-						<p>Manager</p>
-					</div>
-				</div>
-				<div class="image">
-					<img src="/about/6.jpg" alt="" />
-					<div class="color-overlay"></div>
-					<div class="text1">
-						<h2>Francois de Villiers</h2>
-					</div>
-					<div class="text2">
-						<p>General Manager</p>
+					<div class="image">
+						<img src="/about/6.jpg" alt="" />
+						<div class="color-overlay"></div>
+						<div class="text1">
+							<h2>Francois de Villiers</h2>
+						</div>
+						<div class="text2">
+							<p>Tour Guide</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -121,7 +105,7 @@ $transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
 
 .team {
-	max-width: 1000px;
+	max-width: 130 0px;
 	margin: 10% 0;
 	text-align: center;
 
@@ -132,72 +116,79 @@ $transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
 		align-content: center;
 		flex-wrap: wrap;
 
-		.image {
-			position: relative;
-			overflow: hidden;
-			width: 300px;
-			height: 300px;
-			margin: 10px;
-			border-radius: 10px;
-
-			img {
-				max-width: 300px;
+		.row {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			flex-wrap: wrap;
+			.image {
+				position: relative;
+				overflow: hidden;
+				width: 300px;
+				height: 300px;
+				margin: 10px;
 				border-radius: 10px;
-				transition: all 0.35s ease;
-			}
-			.color-overlay {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				border-radius: 10px;
-				background: rgba(0, 0, 0, 0.55);
-				opacity: 0;
-				transition: $transition;
-			}
 
-			.text1 {
-				position: absolute;
-				bottom: 0;
-				text-align: left;
-				color: white;
-				background: rgba(0, 0, 0, 0.5);
-				padding: 5px 15px;
-				width: 100%;
-				p {
-					color: #fc4a1a;
-				}
-				opacity: 1;
-				transition: all 0.35s ease;
-			}
-			.text2 {
-				position: absolute;
-				bottom: 0;
-				text-align: left;
-				color: white;
-				padding: 5px 15px;
-				p {
-					color: #fc4a1a;
-				}
-				opacity: 0;
-				transition: all 0.35s ease;
-			}
-
-			&:hover {
 				img {
-					transform: scale(1.15);
+					max-width: 300px;
+					border-radius: 10px;
+					transition: all 0.35s ease;
 				}
 				.color-overlay {
-					opacity: 1;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					border-radius: 10px;
+					background: rgba(0, 0, 0, 0.55);
+					opacity: 0;
+					transition: $transition;
 				}
+
 				.text1 {
-					background: rgba(0, 0, 0, 0);
-					transform: translateY(-40px);
+					position: absolute;
+					bottom: 0;
+					text-align: left;
+					color: white;
+					background: rgba(0, 0, 0, 0.5);
+					padding: 5px 15px;
+					width: 100%;
+					p {
+						color: #fc4a1a;
+					}
+					opacity: 1;
+					transition: all 0.35s ease;
 				}
 				.text2 {
-					opacity: 1;
-					transform: translateY(-15px);
+					position: absolute;
+					bottom: 0;
+					text-align: left;
+					color: white;
+					padding: 5px 15px;
+					p {
+						color: #fc4a1a;
+					}
+					opacity: 0;
+					transition: all 0.35s ease;
+				}
+
+				&:hover {
+					img {
+						transform: scale(1.15);
+					}
+					.color-overlay {
+						opacity: 1;
+					}
+					.text1 {
+						background: rgba(0, 0, 0, 0);
+						transform: translateY(-40px);
+					}
+					.text2 {
+						opacity: 1;
+						transform: translateY(-15px);
+					}
 				}
 			}
 		}

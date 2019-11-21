@@ -72,6 +72,10 @@
 			<img src="index/Sahpa.png" alt="Paragliding Asscociation" />
 			<img src="index/SAnparks.png" alt="South Africa national parks" />
 		</div>
+
+		<a id="whatsapp" href="https://wa.me/27762865106" title="WhatsApp">
+			<i class="icon icon-whatsapp" />
+		</a>
 	</div>
 </template>
 
@@ -113,6 +117,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+
+#whatsapp {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+
+	border-radius: 50%;
+	background: #25d366;
+
+	color: white;
+	text-align: center;
+	font-size: 26px;
+	transition: $transition;
+	&:hover {
+		transform: translateY(-10px);
+	}
+}
+
 .container {
 	margin: 0;
 }
