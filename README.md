@@ -1,4 +1,4 @@
-<img src="https://github.com/MartCube/paraglidingexperience/blob/working_branch/static/logo.png" alt="drawing" width="100"/>
+<img src="https://github.com/MartCube/paraglidingexperience/blob/working_branch/static/logo.png"/>
 
 # Parapax
 
