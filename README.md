@@ -1,6 +1,5 @@
 <img src="https://github.com/MartCube/paraglidingexperience/blob/working_branch/static/logo.png"/>
 
-# Parapax
 
 - Nuxt SSR
 - Netlify forms
