@@ -1,6 +1,10 @@
-# parapax
+<img src="https://github.com/MartCube/paraglidingexperience/blob/working_branch/static/logo.png" alt="drawing" width="100"/>
 
-> My dandy Nuxt.js project
+# Parapax
+
+- Nuxt SSR
+- Netlify forms
+- Anime.js
 
 ## Build Setup
 
